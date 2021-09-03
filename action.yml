@@ -15,12 +15,13 @@ runs:
   steps:
     - run: |
         echo "This is a bash shell"
+        pwd
         echo "Link ${{ inputs.start-url }}."
         export LOG=log.txt
         export URL=${{ inputs.start-url }}
         echo $URL
         echo "before wget"
-        wget -r --no-check-certificate 'https://open-horizon.github.io' || 0
+        wget -r --no-check-certificate 'https://open-horizon.github.io' || 8
         echo "after wget"
         echo $?;
       shell: bash
