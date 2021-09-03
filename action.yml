@@ -21,7 +21,7 @@ runs:
         export URL=${{ inputs.start-url }}
         echo $URL
         echo "before wget"
-        wget -r --no-check-certificate --spider --timeout=2 'https://open-horizon.github.io' | tee '${LOG}' || true;
+        wget -r --no-check-certificate --spider --timeout=2 'https://open-horizon.github.io' | tee log.txt || true;
         echo "after wget"
         echo $?;
         ls;
