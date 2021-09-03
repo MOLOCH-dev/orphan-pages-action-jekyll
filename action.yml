@@ -19,6 +19,5 @@ runs:
         export LOG=log.txt
         export URL=${{ inputs.start-url }}
         echo $URL
-        wget -r --spider ${{ inputs.start-url }} 2>&1;
-        echo $?
+        echo (`wget -r --spider ${{ inputs.start-url }} 2>&1`);
       shell: bash
