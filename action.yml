@@ -20,7 +20,7 @@ runs:
         export URL=${{ inputs.start-url }}
         echo $URL
         echo "before wget"
-        wget -r -S --header --spider --content-on-error "${{ inputs.start-url }}";
+        wget -r ${{ inputs.start-url }};
         echo "after wget"
         echo $?;
       shell: bash
