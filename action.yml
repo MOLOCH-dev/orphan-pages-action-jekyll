@@ -9,7 +9,7 @@ inputs:
 outputs:
   orphan-pages: # id of output
     description: 'Orphan pages found'
-runs: |
+run: |
   wget --no-directories --mirror --spider "https://open-horizon.github.io/" 2>&1 | tee log.txt;
   crawled_links=(`grep -P -o -e '(?<=^--....-..-.. ..:..:..--  )(.*)' log.txt`);
   cd _site;
