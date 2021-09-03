@@ -1,0 +1,21 @@
+# action.yml
+name: Crawler
+description: 'Crawl website to find orphan pages'
+inputs:
+  start-url:  # id of input
+    description: 'Url to start crawling from'
+    required: true
+    default: https://open-horizon.github.io/
+outputs:
+  orphan-pages: # id of output
+    description: 'Orphan pages found'
+runs: |
+  export LOG=log.txt
+  export URL=${{ inputs.start-url }}
+  wget --no-directories --mirror --spider "$URL" 2>&1 | tee "$LOG";
+  crawled_links=(`grep -P -o -e '(?<=^--....-..-.. ..:..:..--  )(.*)' "$LOG"`);
+  ls;
+  repo_links=$(ls -R | grep ".html\|.js\|.css\|.png\|.md\|.scss");
+  orphan_pages_open_horizon=$(echo ${crawled_links[@]} ${repo_links[@]} | tr ' ' '\n' | sort | uniq -u)
+  echo "The orphan pages are : "
+  {{ outputs.orphan-pages }} = echo $orphan_pages_open_horizon
