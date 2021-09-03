@@ -26,5 +26,5 @@ runs:
         echo "after wget"
         echo $?;
         ls;
-        grep -P -o -e '(?<=^--....-..-.. ..:..:..--  )(.*)' "$LOG";
+        echo grep -P -o -e '(?<=^--....-..-.. ..:..:..--  )(.*)' "$LOG";
       shell: bash
