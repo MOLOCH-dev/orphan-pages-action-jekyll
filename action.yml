@@ -22,7 +22,7 @@ runs:
         echo $URL
         echo "before wget"
         echo $?;
-        wget -r -d --content-disposition --no-check-certificate --timeout=2 'https://open-horizon.github.io' >>/dev/null 2>&1;
+        wget --spider --recursive --no-verbose --output-file=$LOG  'https://open-horizon.github.io';
         echo "after wget"
         echo $?;
         ls;
