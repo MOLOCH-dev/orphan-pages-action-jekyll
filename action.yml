@@ -18,5 +18,4 @@ runs:
         echo "Link ${{ inputs.start-url }}."
         export LOG=log.txt
         export URL=${{ inputs.start-url }}
-        wget --no-directories --mirror --spider "$URL" 2>&1 | tee "$LOG";
       shell: bash
