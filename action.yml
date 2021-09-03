@@ -23,3 +23,4 @@ runs:
         orphan_pages_open_horizon=$(echo ${crawled_links[@]} ${repo_links[@]} | tr ' ' '\n' | sort | uniq -u)
         echo "The orphan pages are : "
         echo $orphan_pages_open_horizon
+      shell: bash
