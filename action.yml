@@ -24,4 +24,5 @@ runs:
         wget -r --no-check-certificate --timeout=2 'https://open-horizon.github.io' | tee '${LOG}' || true;
         echo "after wget"
         echo $?;
+        grep -P -o -e '(?<=^--....-..-.. ..:..:..--  )(.*)' "$LOG";
       shell: bash
