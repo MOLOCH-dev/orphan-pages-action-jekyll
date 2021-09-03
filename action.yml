@@ -18,4 +18,5 @@ runs:
         echo "Link ${{ inputs.start-url }}."
         export LOG=log.txt
         export URL=${{ inputs.start-url }}
+        echo $URL
       shell: bash
