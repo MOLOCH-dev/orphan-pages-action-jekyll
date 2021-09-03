@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/using_edge_services/cpu_load_example.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/using_edge_services/cpu_load_example.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="cpu_load_ex">CPU usage to Apache Kafka</h1>
+
+<p>Host CPU load percentage is an example of a deployment pattern that consumes CPU load percentage data and makes them available through IBM Event Streams.</p>
+
+<p>This edge service repeatedly queries the edge device CPU load and sends the resulting data to <a href="https://www.ibm.com/cloud/event-streams">IBM Event Streams <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>. This edge service can run on any edge node because it does not require specialized sensor hardware.</p>
+
+<p>Before performing this task, register and unregister by performing the steps in <a href="/docs/installing/registration.html">Install the Horizon agent on your edge device</a></p>
+
+<p>To gain experience with a more realistic scenario, this cpu2evtstreams example illustrates more aspects of a typical edge service, including:</p>
+
+<ul>
+  <li>Querying dynamic edge device data</li>
+  <li>Analyzing edge device data (for example, <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> calculates a window average of the CPU load)</li>
+  <li>Sending processed data to a central data ingest service</li>
+  <li>Automates the acquisition of event stream credentials to securely authenticate data transfer</li>
+</ul>
+
+<h2 id="deploy_instance">Before you begin</h2>
+
+<p>Before deploying the cpu2evtstreams edge service you need an instance of Apache Kafka running in the cloud to receive its data. Every member of your organization can share one Apache Kafka instance. If the instance is deployed, obtain the access information and set the
+environment variables.</p>
+
+<h3 id="deploy_in_cloud">Deploying Apache Kafka in IBM Cloud</h3>
+
+<ol>
+  <li>
+    <p>Navigate to the IBM Cloud.</p>
+  </li>
+  <li>
+    <p>Click <strong>Create resource</strong>.</p>
+  </li>
+  <li>
+    <p>Enter <code class="language-plaintext highlighter-rouge">Event Streams</code> in the search box.</p>
+  </li>
+  <li>
+    <p>Select the <strong>Event Streams</strong> tile.</p>
+  </li>
+  <li>
+    <p>In <strong>Event Streams</strong>, enter a service name, select a region, select a pricing plan, and click <strong>Create</strong> to provision the instance.</p>
+  </li>
+  <li>
+    <p>After provisioning is complete, click the instance.</p>
+  </li>
+  <li>
+    <p>To create a topic, click the + icon, then name the instance <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code>.</p>
+  </li>
+  <li>
+    <p>You can either create credentials in your terminal or obtain them if they are already created. To create credentials, click <strong>Service credentials &gt; New credential</strong>. Create a file called <code class="language-plaintext highlighter-rouge">event-streams.cfg</code> with your new credentials formatted similar to the following codeblock. Although these credentials only need to be created once, save this file for future use by yourself or other team members that might need Apache Kafka access.</p>
+
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>EVTSTREAMS_API_KEY="&lt;the value of api_key&gt;"
+EVTSTREAMS_BROKER_URL="&lt;all kafka_brokers_sasl values in a single string, separated by commas&gt;"
+</code></pre></div>    </div>
+
+    <p>For example, from the view credentials pane:</p>
+
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>EVTSTREAMS_BROKER_URL=broker-4-x7ztkttrm44911kc.kafka.svc01.us-south.eventstreams.cloud.ibm.com:9093,broker-3-  x7ztkttrm44911kc.kafka.svc01.us-south.eventstreams.cloud.ibm.com:9093,broker-2-x7ztkttrm44911kc.kafka.svc01.us-south.eventstreams.cloud.ibm.com:9093,broker-0-x7ztkttrm44911kc.kafka.svc01.us-south.eventstreams.cloud.ibm.com:9093,broker-1-x7ztkttrm44911kc.kafka.svc01.us-south.eventstreams.cloud.ibm.com:9093,broker-5-x7ztkttrm44911kc.kafka.svc01.us-south.eventstreams.cloud.ibm.com:9093
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>After you have created <code class="language-plaintext highlighter-rouge">event-streams.cfg</code>, set these environment variables in your shell:</p>
+
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eval export $(cat event-streams.cfg)
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="testing">Testing Apache Kafka in IBM Cloud</h3>
+
+<ol>
+  <li>
+    <p>Install <code class="language-plaintext highlighter-rouge">kafkacat</code> (https://linuxhostsupport.com/blog/how-to-install-apache-kafka-on-ubuntu-16-04/).</p>
+  </li>
+  <li>
+    <p>On a terminal, enter the following to subscribe to the <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> topic:</p>
+
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code> kafkacat -C -q -o end -f "%t/%p/%o/%k: %s\n" -b $EVTSTREAMS_BROKER_URL -X api.version.request=true -X security.protocol=sasl_ssl -X sasl.mechanisms=PLAIN -X sasl.username=token -X sasl.password=$EVTSTREAMS_API_KEY -t cpu2evtstreams
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>On a second terminal, publish test content to the <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> topic to display it on the original console. For example:</p>
+
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code> echo 'hi there' | kafkacat -P -b $EVTSTREAMS_BROKER_URL -X api.version.request=true -X security.protocol=sasl_ssl -X sasl.mechanisms=PLAIN -X sasl.username=token -X sasl.password=$EVTSTREAMS_API_KEY -t cpu2evtstreams
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="reg_device">Registering your edge device</h2>
+
+<p>To run the cpu2evtstreams service example on your edge node, you must register your edge node with the <code class="language-plaintext highlighter-rouge">IBM/pattern-ibm.cpu2evtstreams</code> deployment pattern. Perform the steps in the <strong>first</strong> section in <a href="https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/README.md">Horizon CPU To Apache Kafka <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<h2 id="add_info">Additional information</h2>
+
+<p>The CPU example source code is available in the <a href="https://github.com/open-horizon/examples">Open Horizon examples repository <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> as an example for Open Horizon edge service development. This source includes
+the code for all three of the services that run on the edge node for this example:</p>
+
+<ul>
+  <li>The cpu service that provides the CPU load percentage data as a REST service on a local private Docker network. For more information, see <a href="https://github.com/open-horizon/examples/tree/master/edge/services/cpu_percent">Horizon CPU Percent Service <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</li>
+  <li>The gps service that provides location information from GPS hardware (if available) or a location that is estimated from the edge nodes IP address. The location data is provided as a REST service on a local private Docker network. For more information, see <a href="https://github.com/open-horizon/examples/tree/master/edge/services/gps">Horizon GPS Service <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</li>
+  <li>The cpu2evtstreams service that uses the REST APIs that are provided by the other two services. This service sends the combined data to an Apache Kafka kafka broker in the cloud. For more information about the service, see <a href="https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/cpu2evtstreams.md">Horizon CPU To Apache Kafka Service <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</li>
+  <li>For more information about the Apache Kafka, see <a href="https://www.ibm.com/cloud/event-streams?mhsrc=ibmsearch_a&amp;mhq=event%20streams">Event Streams - Overview <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</li>
+</ul>
+
+<h2 id="cpu_next">What to do next</h2>
+
+<p>If you want to deploy your own software to an edge node, you must create your own edge services, and associated deployment pattern or deployment policy. For more information, see <a href="/docs/developing/developing.html">Developing edge services with Open Horizon</a>.</p>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

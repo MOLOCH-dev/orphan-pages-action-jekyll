@@ -1,0 +1,251 @@
+{
+  
+
+    "2020-08-24-installation-requirements-html": {
+      "title": "What do I need to install Open Horizon?",
+      "content"	 : "What are the installation requirements for Open Horizon?Open Horizon has two main components: the management hub and the agent. The all-in-one installation supports installing both of them in a single VM or standalone bare metal computer.The requirements for installing Open Horizon are:  Architecture: management hub services - x86_64 (amd64)  Memory: 4GB  Storage: 20GB  OS: management hub services - Ubuntu xenial or bionic, server or desktopYou may use a virtual machine (VM) to install on a host computer, as shown on the quick start installation page.",
+      "url": "/2020/08/24/installation-requirements.html",
+      "author": "joewxboy",
+      "categories": ""
+    }
+    ,
+  
+
+    "2020-08-20-dedicated-network-between-services-html": {
+      "title": "Can I assign a dedicated network between services on a node?",
+      "content"	 : "Can I assign a dedicated network between services on a node?Bright Zheng - While deploying multiple containers within one edge node, is it possible to assign a dedicated Docker network to all these containers so that they can communicate through known hostnames?Glen Darling - If you establish dependencies between them, using requiredServces then this private networking is done automatically for you and you can use the name you defined for the service on those networks. The cpu2eventstreams example illustrates this. Note though…. this feature only works on “devices” not on clusters.Ivan Portilla - Network settings are also described here - https://github.com/open-horizon/anax/blob/master/doc/deployment_string.md",
+      "url": "/2020/08/20/dedicated-network-between-services.html",
+      "author": "joewxboy",
+      "categories": ""
+    }
+    ,
+  
+
+    "2020-08-19-sample-faq-html": {
+      "title": "This is a sample question?",
+      "content"	 : "This is a sample question?This is the answer for the sample question.",
+      "url": "/2020/08/19/sample-faq.html",
+      "author": "xiuleiyy",
+      "categories": ""
+    }
+    ,
+  
+
+    "2020-08-18-restart-agent-html": {
+      "title": "How do I (re)start the agent?",
+      "content"	 : "How do I (re)start the agent?To start the native binary agent (usually on Linux), you would need to run it as root:sudo systemctl start horizonThe method used to start or restart the agent differs slightly depending on two factors:  your operating system  if the agent is a native binary or running in a containerIf you are running the agent on OSX, it is containerized.  To start the containerized agent, use the following command:horizon-container start",
+      "url": "/2020/08/18/restart-agent.html",
+      "author": "joewxboy",
+      "categories": ""
+    }
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+}

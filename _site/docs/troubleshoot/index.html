@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/troubleshoot/" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/troubleshoot/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="troubleshooting_devices">Troubleshooting tips</h1>
+
+<p class="shortdesc">Review the following questions when you encounter an issue with Open Horizon. The tips and guides for each question can help you resolve common issues and obtain information to identify root causes.</p>
+
+<ul>
+  <li><a href="#install_horizon">Are the currently released versions of the Horizon packages installed?</a></li>
+  <li><a href="#setup_horizon">Is the Horizon agent currently up and actively running?</a></li>
+  <li><a href="#node_configured">Is the edge node configured to interact with the Horizon exchange?</a></li>
+  <li><a href="#node_running">Are the required Docker containers started for the edge node running?</a></li>
+  <li><a href="#run_user_containers">Are the expected service containers versions running?</a></li>
+  <li><a href="#containers_stable">Are the expected containers stable?</a></li>
+  <li><a href="#container_networked">Are your Docker containers networked correctly?</a></li>
+  <li><a href="#setup_correct">Are the dependency containers reachable within the context of your container?</a></li>
+  <li><a href="#log_user_container_errors">Are your user-defined containers emitting error messages to the log?</a></li>
+  <li><a href="#kafka_subscription">Can you use your organization’s instance of Apache Kafka Kafka broker?</a></li>
+  <li><a href="#publish_containers">Are your containers published to Horizon exchange?</a></li>
+  <li><a href="#services_included">Does your published deployment pattern include all required services and versions?</a></li>
+  <li><a href="#troubleshooting_icp">Troubleshooting tips specific to the OpenShift Container Platform environment</a></li>
+  <li><a href="#troubleshooting_node_errors">Troubleshooting node errors</a></li>
+  <li><a href="#uninstall_podman">How to uninstall Podman on RHEL?</a></li>
+</ul>
+
+<h2 id="install_horizon">Are the currently released versions of the Horizon packages installed?</h2>
+
+<p>Ensure that the Horizon software that is installed on your edge nodes is always on the latest released version.</p>
+
+<p>On a Linux system, you can usually check the version of your installed Horizon packages by running this command:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dpkg -l | grep horizon
+</code></pre></div></div>
+
+<p>You can update your Horizon packages that use the package manager on your system. For example, on an Ubuntu-based Linux system, use the following commands to update Horizon to the current version:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
+sudo apt install -y blue horizon
+</code></pre></div></div>
+
+<h2 id="setup_horizon">Is the Horizon agent up and actively running?</h2>
+
+<p>You can verify that the agent is running by using this Horizon CLI command:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn node list | jq .
+</code></pre></div></div>
+
+<p>You can also use the host’s system management software to check on the status of the Horizon agent. For example, on an Ubuntu-based Linux system, you can use the <code class="language-plaintext highlighter-rouge">systemctl</code> utility:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo systemctl status horizon
+</code></pre></div></div>
+
+<p>A line similar to the following is shown if the agent is active:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Active: active (running) since Thu 2020-10-01 17:56:12 UTC; 2 weeks 0 days ago
+</code></pre></div></div>
+
+<h2 id="node_configured">Is the edge node configured to interact with the Horizon exchange?</h2>
+
+<p>To verify that you can communicate with the Horizon exchange, run this command:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn exchange version
+</code></pre></div></div>
+
+<p>To verify that your Horizon exchange is accessible, run this command:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn exchange user list
+</code></pre></div></div>
+
+<p>After your edge node is registered with Horizon, you can verify whether the node is interacting with Horizon exchange by viewing the local Horizon agent configuration. Run this command to view the agent configuration:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn node list | jq .configuration.exchange_api
+</code></pre></div></div>
+
+<h2 id="node_running">Are the required Docker containers for the edge node running?</h2>
+
+<p>When your edge node is registered with Horizon, a Horizon Agbot creates an agreement with your edge node to run the services that are referenced in your gateway type (deployment pattern). If that agreement is not created, complete these checks to troubleshoot the issue.</p>
+
+<p>Confirm that your edge node is in the <code class="language-plaintext highlighter-rouge">configured</code> state and has the correct <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">organization</code> values. Additionally, confirm that the architecture that Horizon is reporting is the same architecture that you used in the metadata for your services. Run this command to list these settings:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn node list | jq .
+</code></pre></div></div>
+
+<p>If those values are as expected, you can check the agreement status of the edge node by run:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn agreement list | jq .
+</code></pre></div></div>
+
+<p>If this command does not show any agreements; those agreements might have formed, but a problem might have been discovered. If this occurs, the agreement can be cancelled before it can display in the output from the previous command. If an agreement cancellation occurs, the cancelled agreement shows a status of <code class="language-plaintext highlighter-rouge">terminated_description</code> in the list of archived agreements. You can view the archived list by running this command:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn agreement list -r | jq .
+</code></pre></div></div>
+
+<p>A problem might also occur before an agreement is created. If this problem occurs, review the event log for the Horizon agent to identify possible errors. Run this command to view the log:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn eventlog list
+</code></pre></div></div>
+
+<p>The event log can include:</p>
+
+<ul>
+  <li>The signature of the service metadata, specifically the <code class="language-plaintext highlighter-rouge">deployment</code> field, cannot be verified. This error usually means that your signing public key is not imported into your edge node. You can import the key by using the <code class="language-plaintext highlighter-rouge">hzn key import -k &lt;pubkey&gt;</code> command. You can view the keys that are imported to your local edge node by using the <code class="language-plaintext highlighter-rouge">hzn key list</code> command. You can verify that the service metadata in the Horizon exchange is signed with your key by using this command:
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn exchange service verify -k $PUBLIC_KEY_FILE &lt;service-id&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Replace <code class="language-plaintext highlighter-rouge">&lt;service-id&gt;</code> with the ID for your service. This ID can resemble the following sample format: <code class="language-plaintext highlighter-rouge">workload-cpu2wiotp_${CPU2WIOTP_VERSION}_${ARCH2}</code>.</p>
+
+<ul>
+  <li>The path of Docker image in the service <code class="language-plaintext highlighter-rouge">deployment</code> field is incorrect. Confirm that your edge node can <code class="language-plaintext highlighter-rouge">docker pull</code> that image path.</li>
+  <li>The Horizon agent on your edge node does not have access to the Docker registry that holds your Docker images. If the Docker images in the remote Docker registry are not world-readable, you must add the credentials to your edge node by using the <code class="language-plaintext highlighter-rouge">docker login</code> command. You need to complete this step once as the credentials are remembered on the edge node.</li>
+  <li>If a container is continually restarting, review the container log for details. A container can be continually restarting when it is listed for only a few seconds or remains listed as restarting when you run the <code class="language-plaintext highlighter-rouge">docker ps</code> command. You can view the container log for details by running this command:
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep --text -E ' &lt;service-id&gt;\[[0-9]+\]' /var/log/syslog
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="run_user_containers">Are the expected service container versions running?</h2>
+
+<p>Your container versions are governed by an agreement that is created after you add your service to the deployment pattern, and after you register your edge node for that pattern. Verify that your edge node has a current agreement for your pattern, by running this command:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn agreement list | jq .
+</code></pre></div></div>
+
+<p>If you confirmed the correct agreement for your pattern, use this command to view the running containers. Ensure that your user-defined containers are listed and are running:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
+</code></pre></div></div>
+
+<p>The Horizon agent can take several minutes after the agreement is accepted before the corresponding containers are downloaded, verified, and start to run. This agreement is mostly dependent upon the sizes of the containers themselves, which must be pulled from remote repositories.</p>
+
+<h2 id="containers_stable">Are the expected containers stable?</h2>
+
+<p>Check whether your containers are stable by running this command:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
+</code></pre></div></div>
+
+<p>From the command output, you can see the duration that each container is running. If over time, you observe that your containers are restarting unexpectedly, check the container logs for errors.</p>
+
+<p>As a development best practice, consider configuring individual service logging by running the following commands (Linux systems only):</p>
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> <span class="o">&lt;&lt;</span><span class="sh">'</span><span class="no">EOF</span><span class="sh">' &gt; /etc/rsyslog.d/10-horizon-docker.conf
+</span><span class="nv">$template</span><span class="sh"> DynamicWorkloadFile,"/var/log/workload/%syslogtag:R,ERE,1,DFLT:.*workload-([^</span><span class="se">\[</span><span class="sh">]+)--end%.log"
+
+:syslogtag, startswith, "workload-" -?DynamicWorkloadFile
+&amp; stop
+:syslogtag, startswith, "docker/" -/var/log/docker_containers.log
+&amp; stop
+:syslogtag, startswith, "docker" -/var/log/docker.log
+&amp; stop
+</span><span class="no">EOF
+</span>service rsyslog restart
+</code></pre></div></div>
+
+<p>If you complete the previous step, then the logs for your containers are recorded within separate files inside the <code class="language-plaintext highlighter-rouge">/var/log/workload/</code> directory. Use the <code class="language-plaintext highlighter-rouge">docker ps</code> command to find the full names of your containers. You can find the log file of that name, with a <code class="language-plaintext highlighter-rouge">.log</code> suffix, in this directory.</p>
+
+<p>If individual service logging is not configured, your service logs are added to the system log with all other log messages. To review the data for your containers, you need to search for the container name in the system log output within the <code class="language-plaintext highlighter-rouge">/var/log/syslog</code> file. For instance, you can search the log by running a command similar:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep --text -E 'YOURSERVICENAME\[[0-9]+\]' /var/log/syslog
+</code></pre></div></div>
+
+<h2 id="container_networked">Are your containers Docker networked correctly?</h2>
+
+<p>Ensure that your containers are properly Docker networked, so they can access required services. Run this command to ensure that you can view the Docker virtual networks active on your edge node:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network list
+</code></pre></div></div>
+
+<p>To view more information about networks, use the <code class="language-plaintext highlighter-rouge">docker inspect X</code> command, where <code class="language-plaintext highlighter-rouge">X</code> is the name of the network. The command output lists all containers that run on the virtual network.</p>
+
+<p>You can also run the <code class="language-plaintext highlighter-rouge">docker inspect Y</code> command on each container, where <code class="language-plaintext highlighter-rouge">Y</code> is the name of the container, to get more information. For instance, review the <code class="language-plaintext highlighter-rouge">NetworkSettings</code> container information and search the <code class="language-plaintext highlighter-rouge">Networks</code> container. Within this container, you can view the relevant network ID string and information about how the container is represented on the network. This representation information includes the container <code class="language-plaintext highlighter-rouge">IPAddress</code>, and the list of network aliases that are on this network.</p>
+
+<p>Alias names are available to all of the containers on this virtual network, and these names are typically used by the containers in your code deployment pattern for discovering other containers on the virtual network. For example, you can name your service <code class="language-plaintext highlighter-rouge">myservice</code>. Then, other containers can use that name directly to access it on the network, such as with the command <code class="language-plaintext highlighter-rouge">ping myservice</code>. The alias name of your container is specified in the <code class="language-plaintext highlighter-rouge">deployment</code> field of its service definition file that you passed to the <code class="language-plaintext highlighter-rouge">hzn exchange service publish</code> command.</p>
+
+<p>For more information about the commands supported by the Docker command line interface, see <a href="https://docs.docker.com/engine/reference/commandline/docker/#child-commands">Docker command reference <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<h2 id="setup_correct">Are the dependency containers reachable within the context of your container?</h2>
+
+<p>Enter the context of a running container to troubleshoot issues at run time by using the <code class="language-plaintext highlighter-rouge">docker exec</code> command. Use the <code class="language-plaintext highlighter-rouge">docker ps</code> command to find the identifier of your running container, then use a command that resembles the following to enter the context. Replace <code class="language-plaintext highlighter-rouge">CONTAINERID</code> with your container’s identifier:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it CONTAINERID /bin/sh
+</code></pre></div></div>
+
+<p>If your container includes bash, you might want to specify <code class="language-plaintext highlighter-rouge">/bin/bash</code> at the end of the preceding command instead of <code class="language-plaintext highlighter-rouge">/bin/sh</code>.</p>
+
+<p>When inside the container context, you can use commands like <code class="language-plaintext highlighter-rouge">ping</code> or <code class="language-plaintext highlighter-rouge">curl</code> to interact with the containers it requires and verify connectivity.</p>
+
+<p>For more information about the commands supported by the Docker command line interface, see <a href="https://docs.docker.com/engine/reference/commandline/docker/#child-commands">Docker command reference <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<h2 id="log_user_container_errors">Are your user-defined containers emitting error messages to the log?</h2>
+
+<p>If you configured individual service logging, each of your containers log in to a separate file within the <code class="language-plaintext highlighter-rouge">/var/log/workload/</code> directory. Use the <code class="language-plaintext highlighter-rouge">docker ps</code> command to find the full names of your containers. Then, look for a file of that name, and that includes the <code class="language-plaintext highlighter-rouge">.log</code> suffix, within this directory.</p>
+
+<p>If individual service logging is not configured, your service logs to the system log with all other details. To review the data, search for the container log in the system log output within the <code class="language-plaintext highlighter-rouge">/var/log/syslog</code> directory. For instance, search the log by running a command similar to:</p>
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep --text -E 'YOURSERVICENAME\[[0-9]+\]' /var/log/syslog
+</code></pre></div></div>
+
+<h2 id="kafka_subscription">Can you use your organization’s instance of Apache Kafka Kafka broker?</h2>
+
+<p>Subscribing to the Kafka instance for your organization from Apache Kafka can help you verify that your Kafka user credentials are correct. This subscription can also help you verify that your Kafka service instance is running in the cloud, and that your edge node is sending data when data is being published.</p>
+
+<p>To subscribe to your Kafka broker, install the <code class="language-plaintext highlighter-rouge">kafkacat</code> program. For example, on an Ubuntu Linux system, use this command:</p>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>kafkacat
+</code></pre></div></div>
+
+<p>After installation, you can subscribe by using a command similar following example that uses the credentials you usually place in environment variable references:</p>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kafkacat <span class="nt">-C</span> <span class="nt">-q</span> <span class="nt">-o</span> end <span class="nt">-f</span> <span class="s2">"%t/%p/%o/%k: %s</span><span class="se">\n</span><span class="s2">"</span> <span class="nt">-b</span> <span class="nv">$EVTSTREAMS_BROKER_URL</span> <span class="nt">-X</span> api.version.request<span class="o">=</span><span class="nb">true</span> <span class="nt">-X</span> security.protocol<span class="o">=</span>sasl_ssl <span class="nt">-X</span> sasl.mechanisms<span class="o">=</span>PLAIN <span class="nt">-X</span> sasl.username<span class="o">=</span>token <span class="nt">-X</span> sasl.password<span class="o">=</span><span class="nv">$EVTSTREAMS_API_KEY</span> <span class="nt">-t</span> <span class="nv">$EVTSTREAMS_TOPIC</span>
+</code></pre></div></div>
+
+<p>Where <code class="language-plaintext highlighter-rouge">EVTSTREAMS_BROKER_URL</code> is the URL to your Kafka broker, <code class="language-plaintext highlighter-rouge">EVTSTREAMS_TOPIC</code> is your Kafka topic, and <code class="language-plaintext highlighter-rouge">EVTSTREAMS_API_KEY</code> is your API key for authenticating with Apache Kafka API.</p>
+
+<p>If the subscription command is successful, the command blocks indefinitely. The command waits for any publication to your Kafka broker and retrieves and displays any resulting messages. If you do not see any messages from your edge node after a few minutes, review the service log for error messages.</p>
+
+<p>For example, to review the log for the <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> service, run this command:</p>
+
+<ul>
+  <li>For Linux and Windows</li>
+</ul>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tail</span> <span class="nt">-n</span> 500 <span class="nt">-f</span> /var/log/syslog | <span class="nb">grep</span> <span class="nt">-E</span> <span class="s1">'cpu2evtstreams\[[0-9]+\]:'</span>
+</code></pre></div></div>
+
+<ul>
+  <li>For macOS</li>
+</ul>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker logs <span class="nt">-f</span> <span class="si">$(</span>docker ps <span class="nt">--filter</span> <span class="s1">'name=-cpu2evtstreams'</span> | <span class="nb">tail</span> <span class="nt">-n</span> +2 | <span class="nb">awk</span> <span class="s1">'{print $1}'</span><span class="si">)</span>
+</code></pre></div></div>
+
+<h2 id="publish_containers">Are your containers published to Horizon exchange?</h2>
+
+<p>Horizon exchange is the central warehouse for metadata about the code that is published for your edge nodes. If you have not signed and published your code to the Horizon exchange, the code cannot be pulled to your edge nodes, which are verified, and run.</p>
+
+<p>Run the <code class="language-plaintext highlighter-rouge">hzn</code> command with the following arguments to view the list of published code to verify that all of your service containers were successfully published:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn exchange service list | jq .
+hzn exchange service list $ORG_ID/$SERVICE | jq .
+</code></pre></div></div>
+
+<p>The parameter <code class="language-plaintext highlighter-rouge">$ORG_ID</code> is your organization ID, and <code class="language-plaintext highlighter-rouge">$SERVICE</code> is the name of the service you are obtaining information about.</p>
+
+<h2 id="services_included">Does your published deployment pattern include all required services and versions?</h2>
+
+<p>On any edge node where the <code class="language-plaintext highlighter-rouge">hzn</code> command is installed, you can use this command to get details about any deployment pattern. Run the <code class="language-plaintext highlighter-rouge">hzn</code> command with the following arguments to pull the listing of deployment patterns from the Horizon exchange:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn exchange pattern list | jq .
+hzn exchange pattern list $ORG_ID/$PATTERN | jq .
+</code></pre></div></div>
+
+<p>The parameter <code class="language-plaintext highlighter-rouge">$ORG_ID</code> is your organization ID, and <code class="language-plaintext highlighter-rouge">$PATTERN</code> is the name of the deployment pattern you are obtaining information about.</p>
+
+<h2 id="troubleshooting_icp">Troubleshooting tips specific to the OpenShift Container Platform environment</h2>
+
+<p class="shortdesc">Review this content to help you troubleshoot common issues with OpenShift Container Platform environments related to Open Horizon. These tips can help you resolve common issues and obtain information to identify root causes.</p>
+
+<h3 id="setup_correct">Are your Open Horizon credentials configured correctly for use in the OpenShift Container Platform environment?</h3>
+
+<p>You need an OpenShift Container Platform user account to complete any action within Open Horizon in this environment. You also require an API key created from that account.</p>
+
+<p>To verify your Open Horizon credentials in this environment, run this command:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   hzn exchange user list
+</code></pre></div></div>
+
+<p>If a JSON-formatted entry is returned from the Exchange showing one or more users, the Open Horizon credentials are configured properly.</p>
+
+<p>If an error response is returned, you can take steps to troubleshoot your credentials setup.</p>
+
+<p>If the error message indicates an incorrect API key, you can create a new API key that uses the following commands.</p>
+
+<p>See <a href="/docs/hub/prepare_for_edge_nodes.html">Gather the necessary information and files</a>.</p>
+
+<h2 id="troubleshooting_node_errors">Troubleshooting node errors</h2>
+
+<p class="shortdesc">Open Horizon publishes a subset of event logs to the exchange that is viewable in the management console. These errors link to troubleshooting guidance.</p>
+
+<ul>
+  <li><a href="#eil">Image load error</a></li>
+  <li><a href="#eidc">Deployment configuration error</a></li>
+  <li><a href="#esc">Container start error</a></li>
+  <li><a href="#tls_internal">OCP edge cluster TLS internal error</a></li>
+</ul>
+
+<h3 id="eil">Image load error</h3>
+
+<p>This error occurs when the service image that is referenced in the service definition does not exist in the image repository. To resolve this error:</p>
+
+<ol>
+  <li>Republish the service without the <strong>-I</strong> flag.
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code> hzn exchange service publish -f &lt;service-definition-file&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>Push the service image directly to the image repository.
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker push &lt;image name&gt;
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="eidc">Deployment configuration error</h3>
+
+<p>This error occurs when the service definitions deployment configurations specify a bind to a root-protected file. To resolve this error:</p>
+
+<ol>
+  <li>Bind the container to a file that is not root protected.</li>
+  <li>Change the file permissions to allow users to read and write to the file.</li>
+</ol>
+
+<h3 id="esc">Container start error</h3>
+
+<p>This error occurs when docker encounters an error when it starts the service container. The error message might contain details that indicate why the container start failed. Error resolution steps depend on the error. The following errors can occur:</p>
+
+<ol>
+  <li>
+    <p>The device is already using a published port that is specified by the deployment configurations. To resolve the error:</p>
+
+    <ul>
+      <li>Map a different port to the service container port. The displayed port number does not have to match the service port number.</li>
+      <li>Stop the program that is using the same port.</li>
+    </ul>
+  </li>
+  <li>A published port that is specified by the deployment configurations is not a valid port number. Port numbers must be a number in the range 1 -  65535.</li>
+  <li>A volume name in the deployment configurations is not a valid file path. Volume paths must be specified by their absolute (not relative) paths.</li>
+</ol>
+
+<h2 id="uninstall_podman">How to uninstall Podman on RHEL?</h2>
+
+<p>If you currently have Podman installed since it is not yet supported you will need to remove Podman to install Docker on RHEL. Please follow these instructions for doing so to a clean state and ensure you have no other workloads on this device that requires the use of Podman. Podman is planned for future support in future OH versions TBA.</p>
+
+<ol class="codeblock">
+  <li>Uninstall Packages:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum remove buildah skopeo podman containers-common atomic-registries docker container-tools
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<ol class="codeblock">
+  <li>Remove any left-over artifacts &amp; files:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -rf /etc/containers/* /var/lib/containers/* /etc/docker /etc/subuid* /etc/subgid*
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<ol class="codeblock">
+  <li>Delete any associated container storage:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~ &amp;&amp; rm -rf /.local/share/containers/
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<ol>
+  <li>Install Docker by following the instructions for <a href="https://docs.docker.com/engine/install/centos/">Docker CENTOS Installation <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.
+ NOTE: The latest version of Docker is not supported with RHEL 8 by Red Hat, however it is tested to be installable and runs with OH on RHEL 8.</li>
+</ol>
+
+<h3 id="ocp-edge-cluster-tls-internal-error">OCP edge cluster TLS internal error</h3>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Error from server: error dialing backend: remote error: tls: internal error
+</code></pre></div></div>
+
+<p>If you see this error at the end of the cluster agent-install process or while trying to interact with the agent pod, there might be an issue with the Certificate Signing Requests (CSR) of your OCP cluster.</p>
+
+<ol>
+  <li>
+    <p>Check if you have any CSRs in the Pending state:</p>
+
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code> oc get csr
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Approve the pending CSRs:</p>
+  </li>
+</ol>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  oc adm certificate approve &lt;csr-name&gt;
+</code></pre></div></div>
+
+<p><strong>Note</strong>: You can approve all of the CSRs with one command:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  for i in `oc get csr |grep Pending |awk '{print $1}'`; do oc adm certificate approve $i; done
+</code></pre></div></div>
+
+<h3 id="additional-information">Additional information</h3>
+
+<p>For more information, see:</p>
+<ul>
+  <li><a href="/docs/troubleshoot/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

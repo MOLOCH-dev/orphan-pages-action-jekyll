@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/using_edge_services/using_patterns.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/using_edge_services/using_patterns.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="using_patterns">Using patterns</h1>
+
+<p>Typically, service deployment patterns can be published to the Open Horizon (Open Horizon) hub after a developer published an edge service in the horizon exchange.</p>
+
+<p>The hzn CLI provides capabilities to list and manage patterns in the Horizon exchange, including commands to list, publish, verify, update, and remove service deployment patterns. It also provides a way to list and remove cryptographic keys that are associated with a specific deployment pattern.</p>
+
+<p>For a full list of CLI commands and further details:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn exchange pattern -h
+</code></pre></div></div>
+
+<h2 id="example">Example</h2>
+
+<p>Sign and create (or update) a pattern resource in the Horizon exchange:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn exchange pattern publish --json-file=JSON-FILE [&lt;flags&gt;]
+</code></pre></div></div>
+
+<h2 id="using-deployment-patterns">Using deployment patterns</h2>
+
+<p>Using a deployment pattern is a straightforward and simple way to deploy a service to your edge node. You specify the top-level service, or multiple top-level services, to be deployed to your edge node and Open Horizon handles the rest, including the deployment of any dependent services your top-level service might have.</p>
+
+<p>After you create and add a service to the Open Horizon exchange, you need to create a <code class="language-plaintext highlighter-rouge">pattern.json</code> file, similar to:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "IBM/pattern-ibm.cpu2evtstreams": {
+    "owner": "root/root",
+    "label": "Edge ibm.cpu2evtstreams Service Pattern for arm architectures",
+    "description": "Pattern for ibm.cpu2evtstreams sending cpu and gps info to the IBM Event Streams",
+    "public": true,
+    "services": [
+      {
+        "serviceUrl": "ibm.cpu2evtstreams",
+        "serviceOrgid": "IBM",
+        "serviceArch": "arm",
+        "serviceVersions": [
+          {
+            "version": "1.4.3",
+            "priority": {},
+            "upgradePolicy": {}
+          }
+        ],
+        "dataVerification": {
+          "metering": {}
+        },
+        "nodeHealth": {
+          "missing_heartbeat_interval": 1800,
+          "check_agreement_status": 1800
+        }
+      }
+    ],
+    "agreementProtocols": [
+      {
+        "name": "Basic"
+      }
+    ],
+    "lastUpdated": "2020-10-24T14:46:44.341Z[UTC]"
+  }
+}
+</code></pre></div></div>
+
+<p>This code is an example of a <code class="language-plaintext highlighter-rouge">pattern.json</code> file for the <code class="language-plaintext highlighter-rouge">ibm.cpu2evtstreams</code> service for <code class="language-plaintext highlighter-rouge">arm</code> devices. As shown here, there is no need to specify <code class="language-plaintext highlighter-rouge">cpu_percent</code> and <code class="language-plaintext highlighter-rouge">gps</code> (dependent services of <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code>). That task is taken care of by the <code class="language-plaintext highlighter-rouge">service_definition.json</code> file, so a successfully registered edge node runs those workloads automatically.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">pattern.json</code> file gives you the ability to customize rollback settings in the <code class="language-plaintext highlighter-rouge">serviceVersions</code> section. You can specify multiple older versions of your service and give each version a priority for your edge node to roll back to if there is an error with your new version. In addition to assigning a priority to each rollback version, you can specify things like number and duration of retry attempts before falling back to a lower priority version of the specified service.</p>
+
+<p>You can also set any configuration variables your service might need to correctly function centrally when you publish your deployment pattern by including them in the <code class="language-plaintext highlighter-rouge">userInput</code> section near the bottom. When the <code class="language-plaintext highlighter-rouge">ibm.cpu2evtstreams</code> service is published, it passes with it the credentials necessary to publish data to IBM Event Streams, which can be done with:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn exchange pattern publish -f pattern.json
+</code></pre></div></div>
+
+<p>With the pattern published, you can then register an arm device to it:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn register -p pattern-ibm.cpu2evtstreams-arm
+</code></pre></div></div>
+
+<p>This command deploys <code class="language-plaintext highlighter-rouge">ibm.cpu2evtstreams</code> and any dependent services to your node.</p>
+
+<p>Note: A <code class="language-plaintext highlighter-rouge">userInput.json</code> file is not passed into the <code class="language-plaintext highlighter-rouge">hzn register</code> command above, as it would if you were following the steps in <a href="https://github.com/open-horizon/examples/tree/master/edge/evtstreams/cpu2evtstreams#-using-the-cpu-to-ibm-event-streams-edge-service-with-deployment-pattern">Using the CPU To IBM Event Streams Edge Service with Deployment Pattern <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> repository example. Because user inputs were passed with the pattern itself, any edge node that registers automatically has access to those environment variables.</p>
+
+<p>All <code class="language-plaintext highlighter-rouge">ibm.cpu2evtstreams</code> workloads can be stopped by unregistering:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn unregister -fD
+</code></pre></div></div>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

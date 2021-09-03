@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/hub/cluster_sizing.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/hub/cluster_sizing.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="size">Sizing and system requirements</h1>
+
+<h2 id="sizing-considerations">Sizing considerations</h2>
+
+<p>Sizing your cluster involves many considerations. This content describes some of these considerations and provides a best-effort guide to help you size your cluster.</p>
+
+<p>The primary consideration is what services need to run on your cluster. This content provides sizing guidance for the following services only:</p>
+
+<ul>
+  <li>IBM Cloud Platform Common Services</li>
+  <li>Open Horizon (Open Horizon) Management Hub</li>
+</ul>
+
+<p>Optionally, you can install <a href="../admin/accessing_logs.md#ocp_logging">OpenShift Container Platform cluster logging</a>.</p>
+
+<h2 id="open-horizon-database-considerations">Open Horizon database considerations</h2>
+
+<p>Two supported database configurations impact sizing considerations for the Open Horizon management hub:</p>
+
+<ul>
+  <li><strong>Local</strong> databases are installed (by default) as OpenShift resources onto your OpenShift cluster.</li>
+  <li><strong>Remote</strong> databases are databases that you provisioned, which can be on-premises, cloud provider SaaS offerings, and so on.</li>
+</ul>
+
+<h3 id="open-horizon-local-database-storage-requirements">Open Horizon local database storage requirements</h3>
+
+<p><strong>Local</strong> databases require persistent storage, which uses dynamic storage classes that are configured for your OpenShift cluster.</p>
+
+<p>For more information, see <a href="https://docs.openshift.com/container-platform/4.4/storage/understanding-persistent-storage.html">supported dynamic OpenShift storage options and configuration instructions <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<p>A main consideration for the type of storage class that is chosen, is whether that storage class supports <strong>allowVolumeExpansion</strong>. The following returns <strong>true</strong> if it does:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>oc get storageclass &lt;desired storage class&gt; -o json | jq .allowVolumeExpansion
+</code></pre></div></div>
+
+<p>If the storage class allows volume expansion, sizing can be adjusted post installation (given the underlying storage space is available for allocation). If the storage class does not allow volume expansion, you must pre-allocate storage for your use case.</p>
+
+<p>If more storage is necessary after initial installation with a storage class that does not allow for volume expansion, you will need to run through a re-installation using the steps that are described in the <a href="../admin/">backup and recovery</a> page.</p>
+
+<p>The allocations can be changed before the Open Horizon Management Hub installation by modifying the <strong>Storage</strong> values as described on the <a href="/docs/hub/configuration.html">configuration</a> page. The allocations are set to the following default values:</p>
+
+<ul>
+  <li>PostgreSQL Exchange (Stores data for the exchange, and fluctuates in size depending on usage, but the default storage setting can support up to 10,000 devices)
+    <ul>
+      <li>20 GB</li>
+    </ul>
+  </li>
+  <li>PostgreSQL AgBot (Stores data for the agbot, the default storage setting can support up to 10,000 devices)
+    <ul>
+      <li>20 GB</li>
+    </ul>
+  </li>
+  <li>MongoDB Cloud Sync Service (stores content for the Model Management Service (MMS). Depending on the number and size of your models, you might want to modify this default allocation.
+    <ul>
+      <li>50 GB</li>
+    </ul>
+  </li>
+  <li>Secure Device Onboarding persistent volume (Stores device ownership vouchers, device configuration options, and the deployment status of each device)
+    <ul>
+      <li>1 GB (This volume size is not configurable)</li>
+    </ul>
+  </li>
+  <li><strong>Notes:</strong>
+    <ul>
+      <li>Open Horizon volumes are created with the <strong>ReadWriteOnce</strong> access mode.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="open-horizon-remote-database-considerations">Open Horizon remote database considerations</h3>
+
+<p>Leveraging your own <strong>remote</strong> databases reduces the storage class and compute requirements for this installation, unless they are provisioned on the same cluster.</p>
+
+<p>At a minimum, provision <strong>Remote</strong> databases with the following resources and settings:</p>
+
+<ul>
+  <li>2vCPU’s</li>
+  <li>2 GB of RAM</li>
+  <li>The default storage sizes mentioned in the previous section</li>
+  <li>For the PostgreSQL databases, 100 <strong>max_connections</strong> (which is typically the default)</li>
+</ul>
+
+<h2 id="worker-node-sizing">Worker node sizing</h2>
+
+<p>The services that use <a href="https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container">Kubernetes compute resources</a> will be scheduled across available worker nodes.</p>
+
+<h3 id="minimal-requirements-for-supporting-up-to-4000-edge-nodes-supported-with-the-default-open-horizon-configuration">Minimal requirements for supporting up to 4,000 edge nodes (Supported with the default Open Horizon configuration)</h3>
+<p>| Number of worker nodes | vCPUs per worker node | Memory per worker node (GB) | Local disk storage per worker node (GB) |
+| :—: | :—: | :—: | :—: |
+| 3	| 8	| 32	| 100 	|</p>
+
+<h3 id="minimal-requirements-for-supporting-up-to-30000-edge-nodes">Minimal requirements for supporting up to 30,000 edge nodes</h3>
+<p>| Number of worker nodes | vCPUs per worker node | Memory per worker node (GB) | Local disk storage per worker node (GB) |
+| :—: | :—: | :—: | :—: |
+| 3	| 16	| 32	| 100 	|</p>
+
+<p> 
+ </p>
+
+<p>After you determine the appropriate sizing for your cluster, you can begin the <a href="/docs/hub/online_installation.html">installation</a>.</p>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

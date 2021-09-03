@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/installing/many_install.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/installing/many_install.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="batch-install">Bulk agent installation and registration</h1>
+
+<p>Use the bulk installation process to set up multiple edge devices of similar types (in other words, same architecture, operating system, and pattern or policy).</p>
+
+<p>Note: For this process, target edge devices that are macOs computers are not supported. However, you can drive this process from a macOs computer, if wanted. (In other words, this host can be a macOs computer.)</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>The devices to be installed and registered must have network access to the management hub.</li>
+  <li>The devices must have an installed operating system.</li>
+  <li>If you are using DHCP for edge devices, each device must maintain the same IP address until the task is complete (or the same <code class="language-plaintext highlighter-rouge">hostname</code> if you are using DDNS).</li>
+  <li>All edge service user inputs must be specified as defaults in the service definition or in the pattern or deployment policy. No node-specific user inputs can be used.</li>
+</ul>
+
+<h3 id="proc-multiple">Procedure</h3>
+
+<ol class="codeblock">
+  <li>
+    <p>If you have not obtained or created the <strong>agentInstallFiles-&lt;edge-device-type&gt;.tar.gz</strong> file and API key by following <a href="/docs/hub/gather_files.html#prereq_horizon">Gather the necessary information and files for edge devices</a>, do that now. Set the name of the file and the API key value in these environment variables:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">AGENT_TAR_FILE</span><span class="o">=</span>agentInstallFiles-&lt;edge-device-type&gt;.tar.gz
+<span class="nb">export</span> HZN_EXCHANGE_USER_AUTH<span class="o">=</span>iamapikey:&lt;api-key&gt;
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<ol>
+  <li>The <strong>pssh</strong> package includes the <strong>pssh</strong> and <strong>pscp</strong> commands, which enable you to run commands to many edge devices in parallel and copy files to many edge devices in parallel. If you do not have these commands on this host, install the package now:</li>
+</ol>
+
+<ul>
+  <li>On Linux:</li>
+</ul>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>apt <span class="nb">install </span>pssh
+   <span class="nb">alias </span><span class="nv">pssh</span><span class="o">=</span>parallel-ssh
+   <span class="nb">alias </span><span class="nv">pscp</span><span class="o">=</span>parallel-scp
+</code></pre></div></div>
+
+<ul>
+  <li>On macOS:</li>
+</ul>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   brew <span class="nb">install </span>pssh
+</code></pre></div></div>
+
+<p>(If <strong>brew</strong> is not installed yet, see <a href="https://brewinstall.org/Install-pssh-on-Mac-with-Brew/">Install pssh on macOs computer with Brew <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.)</p>
+
+<ol>
+  <li>
+    <p>You can give <strong>pscp</strong> and <strong>pssh</strong> access to your edge devices in several ways. This content describes how to use an ssh public key. First, this host must have an ssh key pair (usually in <strong>~/.ssh/id_rsa</strong> and <strong>~/.ssh/id_rsa.pub</strong>). If it does not have an ssh key pair, generate it:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen <span class="nt">-t</span> rsa
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Place the contents of your public key (<strong>~/.ssh/id_rsa.pub</strong>) on each edge device in <strong>/root/.ssh/authorized_keys</strong>.</p>
+  </li>
+  <li>
+    <p>Create a 2-column mapping file called <strong>node-id-mapping.csv</strong> that maps each edge device’s IP address or hostname to the Open Horizon node name it should be given during registration. When <strong>agent-install.sh</strong> runs on each edge device, this file tells it what edge node name to give to that device. Use CSV format:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hostname/IP, Node Name
+1.1.1.1, factory2-1
+1.1.1.2, factory2-2
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add <strong>node-id-mapping.csv</strong> to the agent tar file:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">gunzip</span> <span class="nv">$AGENT_TAR_FILE</span>
+<span class="nb">tar</span> <span class="nt">-uf</span> <span class="k">${</span><span class="nv">AGENT_TAR_FILE</span><span class="p">%.gz</span><span class="k">}</span> node-id-mapping.csv
+<span class="nb">gzip</span> <span class="k">${</span><span class="nv">AGENT_TAR_FILE</span><span class="p">%.gz</span><span class="k">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Put the list of edge devices you want to bulk install and register in a file named <strong>nodes.hosts</strong> . This will be used with the <strong>pscp</strong> and <strong>pssh</strong> commands. Each line should be in the standard ssh format <code class="language-plaintext highlighter-rouge">&lt;user&gt;@&lt;IP-or-hostname&gt;</code>:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@1.1.1.1
+root@1.1.1.2
+</code></pre></div>    </div>
+
+    <p>Note: If you use a non-root user for any of the hosts, sudo must be configured to allow sudo from that user without entering a password.</p>
+  </li>
+  <li>
+    <p>Copy the agent tar file to the edge devices. This step can take a few moments:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pscp <span class="nt">-h</span> nodes.hosts <span class="nt">-e</span> /tmp/pscp-errors <span class="nv">$AGENT_TAR_FILE</span> /tmp
+</code></pre></div>    </div>
+
+    <p>Note: If you get <strong>[FAILURE]</strong> in the <strong>pscp</strong> output for any of the edge devices, you can see the errors in <strong>/tmp/pscp-errors</strong>.</p>
+  </li>
+  <li>
+    <p>Run <strong>agent-install.sh</strong> on each edge device to install the Horizon agent and register the edge devices. You can use a pattern or a policy to register the edge devices:</p>
+
+    <ol>
+      <li>
+        <p>Register the edge devices with a pattern:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pssh <span class="nt">-h</span> nodes.hosts <span class="nt">-t</span> 0 <span class="s2">"bash -c </span><span class="se">\"</span><span class="s2">tar -zxf /tmp/</span><span class="nv">$AGENT_TAR_FILE</span><span class="s2"> agent-install.sh &amp;&amp; sudo -s ./agent-install.sh -i . -u </span><span class="nv">$HZN_EXCHANGE_USER_AUTH</span><span class="s2"> -p IBM/pattern-ibm.helloworld -w ibm.helloworld -o IBM -z /tmp/</span><span class="nv">$AGENT_TAR_FILE</span><span class="s2"> 2&gt;&amp;1 &gt;/tmp/agent-install.log </span><span class="se">\"</span><span class="s2"> "</span>
+</code></pre></div>        </div>
+
+        <p>Instead of registering the edge devices with the <strong>IBM/pattern-ibm.helloworld</strong> deployment pattern, you can use a different deployment pattern by modifying the <strong>-p</strong>, <strong>-w</strong>, and <strong>-o</strong> flags. To see all available <strong>agent-install.sh</strong> flag descriptions:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-zxf</span> <span class="nv">$AGENT_TAR_FILE</span> agent-install.sh <span class="o">&amp;&amp;</span> ./agent-install.sh <span class="nt">-h</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Or, register the edge devices with policy. Create a node policy, copy it to the edge devices, and register the devices with that policy:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'{ "properties": [ { "name": "nodetype", "value": "special-node" } ] }'</span> <span class="o">&gt;</span> node-policy.json
+pscp <span class="nt">-h</span> nodes.hosts <span class="nt">-e</span> /tmp/pscp-errors node-policy.json /tmp
+pssh <span class="nt">-h</span> nodes.hosts <span class="nt">-t</span> 0 <span class="s2">"bash -c </span><span class="se">\"</span><span class="s2">tar -zxf /tmp/</span><span class="nv">$AGENT_TAR_FILE</span><span class="s2"> agent-install.sh &amp;&amp; sudo -s ./agent-install.sh -i . -u </span><span class="nv">$HZN_EXCHANGE_USER_AUTH</span><span class="s2"> -n /tmp/node-policy.json  -z /tmp/</span><span class="nv">$AGENT_TAR_FILE</span><span class="s2"> 2&gt;&amp;1 &gt;/tmp/agent-install.log </span><span class="se">\"</span><span class="s2"> "</span>
+</code></pre></div>        </div>
+
+        <p>Now the edge devices are ready, but will not start running edge services until you create a deployment policy (business policy) that specifies that a service should be deployed to this type of edge device (in this example, devices with <strong>nodetype</strong> of <strong>special-node</strong>). See <a href="/docs/using_edge_services/detailed_policy.html">Using deployment policy</a> for details.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>If you get <strong>[FAILURE]</strong> in the <strong>pssh</strong> output for any of the edge devices, you can investigate the problem by going to the edge device and viewing <strong>/tmp/agent-install.log</strong> .</p>
+  </li>
+  <li>
+    <p>While the <strong>pssh</strong> command is running, you can view the status of your edge nodes in the Open Horizon console. See <a href="../console/accessing_ui.md">Using the management console</a>.</p>
+  </li>
+</ol>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

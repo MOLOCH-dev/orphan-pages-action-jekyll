@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/troubleshoot/troubleshooting.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/troubleshoot/troubleshooting.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="troubleshooting">Troubleshooting tips and frequently asked questions</h1>
+
+<p class="shortdesc">Review the troubleshooting tips and frequently asked questions to help you troubleshoot issues that you might encounter.</p>
+
+<ul>
+  <li><a href="troubleshooting_devices.md">Troubleshooting tips</a></li>
+  <li><a href="/docs/getting_started/faq.html">Frequently asked questions</a></li>
+</ul>
+
+<p>The following troubleshooting content describes the main components of Open Horizon (Open Horizon) and how to investigate the included interfaces to determine the state of the system.</p>
+
+<h2 id="ts_tools">Troubleshooting tools</h2>
+
+<p>Many interfaces that are included with Open Horizon provide information that can be used to diagnose problems. This information is available through the management console, and HTTP REST APIs and a Linux shell tool, <code class="language-plaintext highlighter-rouge">hzn</code>.</p>
+
+<p>On an edge node you might need to troubleshoot host issues, Horizon software issues, Docker issues, or issues in your configuration or the code in service containers. Edge node host issues are beyond the scope of this document. If you need to troubleshoot Docker issues, you can use many Docker commands and interfaces. For more information, see the Docker documentation.</p>
+
+<p>If the service containers you are running use Apache Kafka (which is based on Kafka) for messaging, you can manually connect to the Kafka streams for Open Horizon to diagnose problems. You can either subscribe to a message topic to observe what was received by Apache Kafka, or you can publish to a message topic to simulate messages from another device. The <code class="language-plaintext highlighter-rouge">kafkacat</code> Linux command is a way to publish or subscribe to Apache Kafka. Use the most recent version of this tool. Apache Kafka also provides graphical web pages that you can use to access some information.</p>
+
+<p>On any edge node where Horizon is installed, use the <code class="language-plaintext highlighter-rouge">hzn</code> command to debug issues with the local Horizon agent and the remote Horizon exchange. Internally, the <code class="language-plaintext highlighter-rouge">hzn</code> command interacts with the provided HTTP REST APIs. The <code class="language-plaintext highlighter-rouge">hzn</code> command simplifies access and provides a better user experience than the REST APIs themselves. The <code class="language-plaintext highlighter-rouge">hzn</code> command often provides more descriptive text in its output, and it includes a built-in online help system. Use the help system to obtain information and details about what commands to use and details about command syntax and arguments. To view this help information, run the <code class="language-plaintext highlighter-rouge">hzn --help</code> or <code class="language-plaintext highlighter-rouge">hzn &lt;subcommand&gt; --help</code> commands.</p>
+
+<p>On edge nodes where Horizon packages are not supported or installed, you can directly interact with the underlying HTTP REST APIs instead. For example, you can use the <code class="language-plaintext highlighter-rouge">curl</code> utility or other REST API CLI utilities. You can also write a program in a language that supports REST queries.</p>
+
+<p>For example, run the <code class="language-plaintext highlighter-rouge">curl</code> utility to check the status of your edge node:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl localhost:8510/status
+</code></pre></div></div>
+
+<h2 id="ts_tips">Troubleshooting tips</h2>
+
+<p>To help troubleshoot specific issues, review the questions about your system state and any associated tips about the following topics. For each question, a description is provided of why the question is relevant to troubleshooting your system. For some questions, tips or a detailed guide is provided to learn how to obtain the related information for your system.</p>
+
+<p>These questions are based on the nature of debugging issues and are related to different environments. For example, when troubleshooting issues on an edge node, you might need complete access to and control of the node, which can increase your capability to collect and view information.</p>
+
+<ul>
+  <li>
+    <p><a href="troubleshooting_devices.md">Troubleshooting tips</a></p>
+
+    <p>Review the common issues that you might encounter when you use Open Horizon.</p>
+  </li>
+</ul>
+
+<h2 id="risks">Open Horizon risks and resolution</h2>
+
+<p>Although Open Horizon creates unique opportunities, it also presents challenges. For example, it transcends the cloud data center physical boundaries, which can expose security, addressability, management, ownership, and compliance issues. More importantly, it multiplies the scaling issues of cloud-based management techniques.</p>
+
+<p>Edge networks increase the number of compute nodes by an order of magnitude. Edge gateways increase that by another order of magnitude. Edge devices increase that number by 3 to 4 orders of magnitude. If DevOps (continuous delivery and continuous deployment) are critical to managing a hyper-scale cloud infrastructure, then zero-ops (operations with no human intervention) is critical to managing at the massive scale that Open Horizon represents.</p>
+
+<p>It is critical to deploy, update, monitor, and recover the edge compute space without human intervention. All of these activities and processes must be:</p>
+
+<ul>
+  <li>Fully automated</li>
+  <li>Capable of independent decision-making about work allocation</li>
+  <li>Able to recognize and recover from changing conditions without intervention.</li>
+</ul>
+
+<p>All of these activities must be secure, traceable, and defensible.</p>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

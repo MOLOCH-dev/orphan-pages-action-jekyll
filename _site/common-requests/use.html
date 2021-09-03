@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="How to use Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///common-requests/use.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>How to use Open Horizon - Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/common-requests/use.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">How to use Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">Basic instructions and examples for using the Open Horizon projects CLI</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			<h1 id="how-to-use-open-horizon">How to use Open Horizon</h1>
+
+<h2 id="now-that-i-have-it-installed-what-next">Now that I have it installed, what next?</h2>
+
+<p>You should become familiar with the Command Line Interface (CLI). This is the primary way to interact with the Anax agent and management hub services.</p>
+
+<blockquote>
+  <p>Note: Type <code class="language-plaintext highlighter-rouge">hzn</code> to view information about getting started with the CLI.</p>
+</blockquote>
+
+<h2 id="try-a-command">Try a command</h2>
+
+<p>Use “version” to view the CLI and agent version numbers:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn version
+</code></pre></div></div>
+
+<p><button id="copybutton316809120" data-clipboard-text="hzn version" aria-label="Copied!">
+  Copy to clipboard
+</button></p>
+
+<script>
+var clipboard316809120 = new ClipboardJS('#copybutton316809120');
+
+clipboard316809120.on('success', function(e) {
+
+    // Set Button HTML to 'Copied!'
+    document.querySelector('#copybutton316809120').innerHTML = 'Copied!';
+
+    // After 2 seconds, return back to original text.
+    setTimeout(() => {
+     document.querySelector('#copybutton316809120').innerHTML = 'Copy to clipboard';
+    }, 2000);
+
+    /* Testing custom logic through console
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    */
+
+    console.log(e);
+    
+});
+clipboard316809120.on('error', function(e) {
+
+    /* Testing custom logic through console
+    console.info('Action:', e.action);
+    console.info('Trigger:', e.trigger);
+    */
+
+    console.log(e);
+});
+</script>
+
+<p>In this example, the command returns:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Horizon CLI version: 2.26.12
+Horizon Agent version: 2.26.12
+</code></pre></div></div>
+
+<h2 id="find-the-edge-nodes-configuration">Find the edge nodes configuration</h2>
+
+<p>Use <code class="language-plaintext highlighter-rouge">node</code> to find the node configuration from the agent:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn node list
+</code></pre></div></div>
+
+<p><button id="copybutton316976869" data-clipboard-text="hzn node list" aria-label="Copied!">
+  Copy to clipboard
+</button></p>
+
+<script>
+var clipboard316976869 = new ClipboardJS('#copybutton316976869');
+
+clipboard316976869.on('success', function(e) {
+
+    // Set Button HTML to 'Copied!'
+    document.querySelector('#copybutton316976869').innerHTML = 'Copied!';
+
+    // After 2 seconds, return back to original text.
+    setTimeout(() => {
+     document.querySelector('#copybutton316976869').innerHTML = 'Copy to clipboard';
+    }, 2000);
+
+    /* Testing custom logic through console
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    */
+
+    console.log(e);
+    
+});
+clipboard316976869.on('error', function(e) {
+
+    /* Testing custom logic through console
+    console.info('Action:', e.action);
+    console.info('Trigger:', e.trigger);
+    */
+
+    console.log(e);
+});
+</script>
+
+<blockquote>
+  <p>Note the typical [CLI] [Object Noun] [Action Verb] pattern.</p>
+</blockquote>
+
+<p>The response should be similar to this JSON example:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">node1</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">organization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">myorg</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">pattern</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">node1</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">nodeType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">device</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">token_last_valid_time</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2020-08-04 16:00:30 -0400 EDT</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">token_valid</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">ha</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">configstate</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">state</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">configured</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">last_update_time</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2020-08-04 16:00:31 -0400 EDT</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">configuration</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">exchange_api</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://host.docker.internal:3090/v1/</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">exchange_version</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2.37.0</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">required_minimum_exchange_version</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2.23.0</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">preferred_exchange_version</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2.23.0</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">mms_api</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://host.docker.internal:9443</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">architecture</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">amd64</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">horizon_version</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2.26.12</span><span class="dl">"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="example-details">Example details</h3>
+
+<p>In the first two lines, <code class="language-plaintext highlighter-rouge">id</code> is the ID assigned to this edge node and <code class="language-plaintext highlighter-rouge">organization</code> is the ad-hoc group that owns the device.</p>
+
+<p>If the <code class="language-plaintext highlighter-rouge">configstate.state</code> property value is <strong>configured</strong>, the edge node is currently registered for a service.</p>
+
+<p>Lastly, if you do not see a version number value in the <code class="language-plaintext highlighter-rouge">configuration.exchange_version</code> property, this is probably because the agent cannot query the exchange service for the version. This might indicate that your agent is not connected to the management hub, but this is not typical in all-in-one installations.</p>
+
+<h2 id="check-the-agreement">Check the agreement</h2>
+
+<p>Check the agreement formed when your edge node registered for a service:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn agreement list
+</code></pre></div></div>
+
+<p><button id="copybutton317130407" data-clipboard-text="hzn agreement list" aria-label="Copied!">
+  Copy to clipboard
+</button></p>
+
+<script>
+var clipboard317130407 = new ClipboardJS('#copybutton317130407');
+
+clipboard317130407.on('success', function(e) {
+
+    // Set Button HTML to 'Copied!'
+    document.querySelector('#copybutton317130407').innerHTML = 'Copied!';
+
+    // After 2 seconds, return back to original text.
+    setTimeout(() => {
+     document.querySelector('#copybutton317130407').innerHTML = 'Copy to clipboard';
+    }, 2000);
+
+    /* Testing custom logic through console
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    */
+
+    console.log(e);
+    
+});
+clipboard317130407.on('error', function(e) {
+
+    /* Testing custom logic through console
+    console.info('Action:', e.action);
+    console.info('Trigger:', e.trigger);
+    */
+
+    console.log(e);
+});
+</script>
+
+<p>This command displays a JSON array of objects showing one or more active agreements between the edge node and AgBots:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Policy for myorg/node1 merged with myorg/policy-ibm.helloworld_1.0.0</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">current_agreement_id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">83785680de5d22c874a0f54dc229738a0e744db22b2c0deeb320b9fdf0967138</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">consumer_id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">IBM/agbot</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">agreement_creation_time</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2020-08-04 16:44:36 -0400 EDT</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">agreement_accepted_time</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">agreement_finalized_time</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">agreement_execution_start_time</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">agreement_data_received_time</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">agreement_protocol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Basic</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">workload_to_run</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ibm.helloworld</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">org</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">IBM</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">version</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0.0</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">arch</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">amd64</span><span class="dl">"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<p>Note the following properties:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">0.agreement_creation_time</code></td>
+      <td>When the agreement was proposed by the AgBot</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">0.agreement_accepted_time</code></td>
+      <td>When the agreement was accepted by the edge node</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">0.agreement_finalized_time</code></td>
+      <td>When the agreement was completed</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">0.agreement_execution_start_time</code></td>
+      <td>When the edge node began downloading the container image(s)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>After you see the <code class="language-plaintext highlighter-rouge">agreement_execution_start_time</code> value, you can run <code class="language-plaintext highlighter-rouge">docker ps</code> to confirm that the workloads have started.</p>
+
+<h2 id="more-activities">More activities</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>View the default “helloworld” sample service</td>
+      <td><code class="language-plaintext highlighter-rouge">hzn service log -f ibm.helloworld</code></td>
+    </tr>
+    <tr>
+      <td>View the agreement negotiation logged steps</td>
+      <td><code class="language-plaintext highlighter-rouge">hzn eventlog list</code></td>
+    </tr>
+    <tr>
+      <td>View the node policy</td>
+      <td><code class="language-plaintext highlighter-rouge">hzn policy list</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="communicate-with-the-exchange">Communicate with the exchange</h2>
+
+<p>To use the exchange communication commands, set up two environment variables.</p>
+
+<h3 id="pre-requisite">Pre-requisite</h3>
+
+<p>You need this information from the all-in-one installation summary message displayed when you installed the management hub, agent, and CLI.  The summary message is similar to this example:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>----------- Summary of what was done:
+  1. Started Horizon management hub services: agbot, exchange, postgres DB, CSS, mongo DB
+  2. Created exchange resources: system org (IBM) admin user, user org (myorg) and admin user, and agbot
+     - Exchange root user generated password: 1234567890
+     - System org admin user generated password: AbcDEfg
+     - Agbot generated token: Abc123YZ
+     - User org admin user generated password: XLmdsg236
+     - Node generated token: uingtw398J
+     Important: save these generated passwords/tokens in a safe place. You will not be able to query them from Horizon.
+  3. Installed the Horizon agent and CLI (hzn)
+  4. Created a Horizon developer key pair
+  5. Installed the Horizon examples
+  6. Created and registered an edge node to run the helloworld example edge service
+For what to do next, see: https://github.com/open-horizon/devops/blob/master/mgmt-hub/README.md#all-in-1-what-next
+</code></pre></div></div>
+
+<p>Use the “User org admin user generated password” in the previous message to export the following environment variables, using the substitution shown below:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">HZN_ORG_ID</span><span class="o">=</span>myorg
+<span class="nb">export </span><span class="nv">HZN_EXCHANGE_USER_AUTH</span><span class="o">=</span>admin:[User org admin user generated password]
+</code></pre></div></div>
+
+<blockquote>
+  <p>Now, you should be able to connect to the exchange with the CLI.</p>
+</blockquote>
+
+<p>Use <code class="language-plaintext highlighter-rouge">hzn exchange status</code> or <code class="language-plaintext highlighter-rouge">hzn exchange node list</code> to confirm that it works with no errors. Additionally, <code class="language-plaintext highlighter-rouge">hzn exchange user list</code> displays the user account that you are currently using and if it is authenticated successfully.</p>
+
+<p>These commands are available now:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>View the example edge services</td>
+      <td><code class="language-plaintext highlighter-rouge">hzn exchange service list IBM/</code></td>
+    </tr>
+    <tr>
+      <td>View the example patterns</td>
+      <td><code class="language-plaintext highlighter-rouge">hzn exchange pattern list IBM/</code></td>
+    </tr>
+    <tr>
+      <td>View the example deployment policies</td>
+      <td><code class="language-plaintext highlighter-rouge">hzn exchange deployment listpolicy</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="more-information">More information</h2>
+
+<p>Use the hzn [command] (sub-command) -h pattern to explore other commands.</p>
+
+<p>Example:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">hzn -h</code></li>
+  <li><code class="language-plaintext highlighter-rouge">hzn exchange -h</code></li>
+  <li><code class="language-plaintext highlighter-rouge">hzn exchange status -h</code></li>
+</ul>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

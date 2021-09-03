@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/developing/best_practices.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/developing/best_practices.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="edge_native_practices">Edge-native development best practices</h1>
+
+<p>You will be creating workloads that will operate in the edge – at compute facilities that exist outside the normal confines of your IT data center or cloud environment. That means you need to consider the unique conditions of those environments. This is referred to as the edge-native programming model.</p>
+
+<h2 id="best_practices">Best practices for developing edge services</h2>
+
+<p class="shortdesc">The following best practices and guidelines help you design and develop edge services for use with Open Horizon (OH).</p>
+
+<p>Automating the running of services at the edge is different from automating services in the cloud in the following ways:</p>
+
+<ul>
+  <li>The number of edge nodes can be much greater.</li>
+  <li>The networks to edge nodes can be unreliable and much slower. Edge nodes are often behind firewalls so connections usually cannot be initiated from the cloud to the edge nodes.</li>
+  <li>Edge nodes are resource-constrained.</li>
+  <li>A driving force behind operating workloads at the edge is the ability to reduce latency and optimize network bandwidth. This makes workload placement in relation to where data is generated an important factor.</li>
+  <li>Typically, edge nodes are in remote locations and are not set up by operations staff. After an edge node is set up, staff might not be available to administer the node.</li>
+  <li>Edge nodes are also usually less trusted environments than cloud servers.</li>
+</ul>
+
+<p>These differences require different techniques to deploy and manage software on edge nodes. OH is designed for managing edge nodes. When you are creating services, adhere to the following guidelines to ensure that your services are designed for working with edge nodes.</p>
+
+<h2 id="service_guidelines">Guidelines for developing services</h2>
+
+<ul>
+  <li>
+    <p><strong>Cloud-native programming model:</strong> The edge-native programming model inherits many principles from cloud-native programming, including:</p>
+
+    <ul>
+      <li>Componentize and containerize your workloads – construct your application around a set of microservices, each packaged into logically related groups, but balance that grouping to recognize where different containers might operate best at different tiers or edge nodes.</li>
+      <li>Expose APIs to your microservices that enable other parts of your application to find the services they depend on.</li>
+      <li>Design loose-coupling between microservices to enable them to operate independently of each other, and to avoid stateful assumptions that impose affinities between services that would otherwise undermine elastic scaling, failover, and recovery.</li>
+      <li>Exercise continuous-integration and continuous-deployment (CI/CD), coupled with Agile Development practices within a DevOps framework.</li>
+      <li>Consider the following resources for more information about cloud-native programming practices:
+        <ul>
+          <li><a href="https://thenewstack.io/10-key-attributes-of-cloud-native-applications/">10 KEY ATTRIBUTES OF CLOUD-NATIVE APPLICATIONS <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a></li>
+          <li><a href="https://researcher.watson.ibm.com/researcher/view_group.php?id=9957">Cloud Native Programming <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a></li>
+          <li><a href="https://www.redhat.com/en/topics/cloud-native-apps">Understanding cloud-native applications <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Service availability:</strong> If your service container requires and uses other service containers, your service must be tolerant when those services are absent in some situations. For example, when containers initially start, even though they are started from the end of the dependency graph, moving upward, some services can start more quickly than others. In this situation, your service containers need to retry while they wait for the dependencies to be fully functional. Similarly, if a dependent service container is automatically updated, then it is restarted. It is a best practice for your services to always be tolerant of interruptions in the services they depend on.</li>
+  <li><strong>Portability:</strong> The world of edge computing spans multiple tiers of the system – including edge devices, edge clusters, and network or metro edge locations. Where your containerized edge workload will eventually be placed depend on a combination of factors, including its dependence on certain resources, such as sensor data and actuators, end latency requirements, and available compute capacity. You should design your workload to tolerate being placed in different tiers of the system depending on the needs of the context in which your application will be used.</li>
+  <li><strong>Container orchestration:</strong> Further to the previous point about multi-tier portability; typically edge devices will be operated with native Docker runtime – with no local container orchestration. Edge clusters and network/metro edges will be configured with Kubernetes to orchestrate the workload against shared competing resource demands. You should implement your container to avoid any explicit dependence on either Docker or Kubernetes to enable its portability to different tiers of the distributed edge computing world.</li>
+  <li><strong>Externalize configuration parameters:</strong> Use the built-in support provided by Open Horizon to externalize any configuration variables and resource dependencies so that these can be supplied and updated to values that are specific to the node to which your container is deployed.</li>
+  <li><strong>Secure secrets:</strong> Edge services often require integration with on-prem or cloud based services, which require authentication credentials. Exploit the <a href="/docs/developing/secrets_details.html">secrets manager</a> to securely deploy sensitive information to edge nodes.</li>
+  <li>
+    <p><strong>Size considerations:</strong> Your service containers must be as small as possible so that the services can be deployed over potentially slow networks or to small edge devices. To help you develop smaller service containers, use the following techniques:</p>
+
+    <ul>
+      <li>Use programming languages that can help you build smaller services:
+        <ul>
+          <li>Best: go, rust, c, sh</li>
+          <li>OK: c++, python, bash</li>
+          <li>Consider: nodejs, Java and JVM-based languages, such as scala</li>
+        </ul>
+      </li>
+      <li>Use techniques that can help you construct smaller Docker images:
+        <ul>
+          <li>Use alpine as the base image for Linux.</li>
+          <li>To install packages in an alpine-based image, use the command <code class="language-plaintext highlighter-rouge">apk --no-cache --update add</code> to avoid storing the package cache, which is not needed for runtime.</li>
+          <li>Delete files in the same Dockerfile layer (command) where the files are added. If you use a separate Dockerfile command line to delete the files from the image, you increase the size of the container image. For example, you can use <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> to group the commands to download, use, and then delete files, all within a single Dockerfile <code class="language-plaintext highlighter-rouge">RUN</code> command.</li>
+          <li>Do not include build tools in your runtime Docker image. As a best practice, use a <a href="https://docs.docker.com/develop/develop-images/multistage-build/">Docker Multi-stage build <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> to build the runtime artifacts. Then, selectively copy the required runtime artifacts, such as the executable components, into your runtime Docker image.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Keep services self-contained:</strong> Because a service needs to be sent over a network to edge nodes and autonomously started, the service container needs to include everything that the service depends upon. You need to bundle these assets, such as all required certificates, into the container. Do not rely on the availability of administrators for completing tasks to add any required assets to the edge node for a service to run successfully.</li>
+  <li><strong>Data privacy:</strong> Each time that you move private and sensitive data around the network, you increase the vulnerability of that data to attack and exposure. Edge computing offers, as one of its major benefits, the opportunity to keep that data where it is created. Respect that opportunity in your container by protecting it. Ideally, do not pass that data to other services. If you absolutely must pass data to other services or tiers in the system, attempt to remove personally identifying information (PII), personal health information (PHI), or personal financial information (PFI) through obfuscation or de-identification techniques or by encrypting it with a key that is owned entirely within the confines of your service.</li>
+  <li><strong>Design and configure for automation:</strong> Edge nodes, and the services that run on the nodes, need to be as close to zero-ops as possible. Open Horizon automates the deployment and management of services, but the services must be structured to enable Open Horizon to be able to automate these processes without human intervention. To help design for automation, adhere to the following guidelines:
+    <ul>
+      <li>Limit the number of user input variables for a service. Any UserInput variables without default values in the service definition require that values be specified for each edge node. Limit the number of variables, or avoid services that use variables, whenever possible.</li>
+      <li>If a service requires many configurable settings, use a configuration file for defining the variables. Include a default version of the configuration file within the service container. Then, use the Open Horizon model management system to enable the administrator to provide their own configuration file and update it over time.</li>
+      <li><strong>Leverage standard platform services:</strong> Many of your application needs can be met by pre-implemented platform services. Rather than creating these capabilities from scratch in your application, consider using what has already been created and is available to you. One source of such platform services includes the IBM Cloud Pak, which covers a wide range of capabilities, many of which have, themselves, been built using cloud-native programming practices, such as:
+        <ul>
+          <li><strong>Data Management:</strong> consider IBM Cloud Pak for Data for your SQL and non-SQL, block, and object storage database requirements; machine learning and AI services, and data lake needs.</li>
+          <li><strong>Security:</strong> consider IBM CloudPak for Security for your encryption, code scanning, and intrusion detection needs.</li>
+          <li><strong>Applications:</strong> consider IBM Cloud Pak for Applications for your web application, serverless, and application framework needs.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

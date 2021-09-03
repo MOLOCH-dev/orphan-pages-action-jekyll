@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/admin/multi_tenancy.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/admin/multi_tenancy.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="multit">Multi-tenancy</h1>
+
+<h2 id="tenants">Tenants in Open Horizon</h2>
+
+<p>Open Horizon (Open Horizon) supports the general IT concept of multi-tenancy through organizations, where each tenant has their own organization. Organizations separate resources; therefore, users within each organization cannot create or modify resources in a different organization. Furthermore, resources in an organization can be viewed only by users in that organization, unless the resources are marked as public.</p>
+
+<h3 id="common-use-cases">Common use cases</h3>
+
+<p>Two broad use cases are used to leverage multi-tenancy in Open Horizon:</p>
+
+<ul>
+  <li>An enterprise has multiple business units, where each business unit is a separate organization in the same Open Horizon management hub. Consider the legal, business, or technical reasons why each business unit ought to be a separate organization with its own set of Open Horizon resources which are by default not accessible by the other business units. Note that even with separate organizations, the enterprise still has the option to use a common group of organization administrators to manage all of the organizations.</li>
+  <li>An enterprise hosts Open Horizon as a service for its customers, where each of their customers has one or more organizations in the management hub. In this case, the organization administrators are unique to each customer.</li>
+</ul>
+
+<p>The use case you choose determines how you configure Open Horizon and Identity and Access Manager (<a href="https://www.ibm.com/support/knowledgecenter/SSHKN6/iam/landing_iam.html">IAM</a>).</p>
+
+<h3 id="user-types">Types of Open Horizon users</h3>
+
+<p>Open Horizon supports these user roles:</p>
+
+<table caption="Table 1. Open Horizon user roles" caption-side="top">
+  <thead>
+    <tr>
+      <th><strong>Role</strong></th>
+      <th><strong>Access</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Hub admin</strong></td>
+      <td>Manages the list of Open Horizon organizations by creating, modifying, and deleting organizations as necessary, and by creating organization admins within each organization.</td>
+    </tr>
+    <tr>
+      <td><strong>Organization admin</strong></td>
+      <td>Manages the resources in one or more Open Horizon organizations. Organization admins can create, view, or modify any resource (user, node, service, policy, or pattern) within the organization, even if they are not the owner of the resource.</td>
+    </tr>
+    <tr>
+      <td><strong>Regular user</strong></td>
+      <td>Creates nodes, services, policies, and patterns within the organization and modifies or deletes the resources that they have created. Views all of the services, policies, and patterns in the organization that other users have created.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>See <a href="/docs/user_management/rbac.html">Role-based access control</a> for a description of all Open Horizon roles.</p>
+
+<h2 id="iam-to-ieam">The relationship between IAM and Open Horizon</h2>
+
+<p>The IAM (Identity and Access Manager) service manages users for all Cloud Pak based products, including Open Horizon. IAM in turn uses LDAP to store the users. Each IAM user can be a member of one or more IAM teams. Because each IAM team is associated with an IAM account, an IAM user can indirectly be a member of one or more IAM accounts. See <a href="https://www.ibm.com/support/knowledgecenter/SSHKN6/iam/3.x.x/multitenancy/multitenancy.html">IAM multi-tenancy</a> for details.</p>
+
+<p>The Open Horizon exchange provides authentication and authorization services for the other Open Horizon components. The exchange delegates the authentication of users to IAM, which means IAM user credentials are passed to the exchange and it relies on IAM to determine if they are valid. Each user role (hub admin, organization admin, or regular user) is defined in the exchange, and that determines the actions that users are allowed to perform in Open Horizon.</p>
+
+<p>Each organization in the Open Horizon exchange is associated with an IAM account. Therefore IAM users in an IAM account are automatically members of the corresponding Open Horizon organization. The one exception to this rule is that the Open Horizon hub admin role is considered to be outside of any specific organization; therefore, it does not matter what IAM account the hub admin IAM user is in.</p>
+
+<p>To summarize the mapping between IAM and Open Horizon:</p>
+
+<table caption="Table 2. IAM - Open Horizon mapping" caption-side="top">
+  <thead>
+    <tr>
+      <th><strong>IAM</strong></th>
+      <th><strong>Relationship</strong></th>
+      <th><strong>Open Horizon</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IAM Account</td>
+      <td>maps to</td>
+      <td>Open Horizon Organization</td>
+    </tr>
+    <tr>
+      <td>IAM User</td>
+      <td>maps to</td>
+      <td>Open Horizon User</td>
+    </tr>
+    <tr>
+      <td>There is no IAM counterpart for role</td>
+      <td>none</td>
+      <td>Open Horizon role</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The credentials used to log in to the Open Horizon console are the IAM user and password. The credentials used for the Open Horizon CLI (<code class="language-plaintext highlighter-rouge">hzn</code>) is an IAM API key.</p>
+
+<h2 id="initial-org">The initial organization</h2>
+
+<p>By default, an organization was created during Open Horizon installation with a name that you provided. If you do not need the multi-tenant capabilities of Open Horizon, this initial organization is sufficient for your use of Open Horizon, and you can skip the rest of this page.</p>
+
+<h2 id="create-hub-admin">Creating a hub admin user</h2>
+
+<p>The first step of using Open Horizon multi-tenancy is to create one or more hub admins that can create and manage the organizations. Before you can do this, you must create or choose an IAM account and user that will have the hub admin role assigned to it.</p>
+
+<ol>
+  <li>
+    <p>Use <code class="language-plaintext highlighter-rouge">cloudctl</code> to log in to the Open Horizon management hub as the cluster administrator. (If you have not already installed <code class="language-plaintext highlighter-rouge">cloudctl</code>, see <a href="../cli/cloudctl_oc_cli.md">Installing cloudctl, kubectl, and oc</a> for instructions.)</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cloudctl login <span class="nt">-a</span> &lt;cluster-url&gt; <span class="nt">-u</span> admin <span class="nt">-p</span> &lt;password&gt; <span class="nt">--skip-ssl-validation</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you have not already connected an LDAP instance to IAM, do so now by following <a href="https://www.ibm.com/support/knowledgecenter/SSHKN6/iam/3.x.x/configure_ldap.html">Connecting to your LDAP directory</a>.</p>
+  </li>
+  <li>
+    <p>The hub admin user must be in an IAM account. (It does not matter which account.) If you do not already have an IAM account you want the hub admin user to be in, create one:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">IAM_ACCOUNT_NAME</span><span class="o">=</span><span class="s1">'hub admin account'</span>   <span class="c"># or choose another name</span>
+cloudctl iam account-create <span class="s2">"</span><span class="nv">$IAM_ACCOUNT_NAME</span><span class="s2">"</span> <span class="nt">-d</span> <span class="s1">'account for the hub admin users'</span>
+<span class="nv">IAM_ACCOUNT_ID</span><span class="o">=</span><span class="si">$(</span>cloudctl iam account <span class="s2">"</span><span class="nv">$IAM_ACCOUNT_NAME</span><span class="s2">"</span> | <span class="nb">grep</span> <span class="nt">-E</span> <span class="s1">'^ID'</span> | <span class="nb">awk</span> <span class="s1">'{print $2}'</span><span class="si">)</span>
+<span class="nv">IAM_TEAM_ID</span><span class="o">=</span><span class="si">$(</span>cloudctl iam teams <span class="nt">-s</span> | <span class="nb">grep</span> <span class="nt">-m</span> 1 <span class="s2">"</span><span class="nv">$IAM_ACCOUNT_NAME</span><span class="s2">"</span> | <span class="nb">awk</span> <span class="s1">'{print $1}'</span><span class="si">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create or choose an LDAP user that will be dedicated to the Open Horizon hub admin role. <strong>Note:</strong> Do not use the same user as both an Open Horizon hub admin and an Open Horizon organization admin (or regular Open Horizon user).</p>
+  </li>
+  <li>
+    <p>Import the user to IAM:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">HUB_ADMIN_USER</span><span class="o">=</span>&lt;the IAM/LDAP user name of the hub admin user&gt;
+cloudctl iam user-import <span class="nt">-u</span> <span class="nv">$HUB_ADMIN_USER</span>
+cloudctl iam user-onboard <span class="nv">$IAM_ACCOUNT_ID</span> <span class="nt">-r</span> PRIMARY_OWNER <span class="nt">-u</span> <span class="nv">$HUB_ADMIN_USER</span>
+<span class="nv">IAM_RESOURCE_ID</span><span class="o">=</span><span class="si">$(</span>cloudctl iam resources | <span class="nb">grep</span> <span class="s1">':n/ibm-edge:'</span><span class="si">)</span>
+cloudctl iam resource-add <span class="nv">$IAM_TEAM_ID</span> <span class="nt">-r</span> <span class="nv">$IAM_RESOURCE_ID</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Assign the hub admin role to the IAM user:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">EXCHANGE_ROOT_PW</span><span class="o">=</span>&lt;password <span class="k">for </span>the exchange root user&gt;
+<span class="nb">export </span><span class="nv">HZN_ORG_ID</span><span class="o">=</span>root
+<span class="nb">export </span><span class="nv">HZN_EXCHANGE_USER_AUTH</span><span class="o">=</span>root/root:<span class="nv">$EXCHANGE_ROOT_PW</span>
+<span class="nb">export </span><span class="nv">HZN_EXCHANGE_URL</span><span class="o">=</span>&lt;the URL of your exchange&gt;
+curl <span class="nt">-sS</span> <span class="nt">-w</span> %<span class="o">{</span>http_code<span class="o">}</span> <span class="nt">-u</span> <span class="s2">"</span><span class="nv">$HZN_EXCHANGE_USER_AUTH</span><span class="s2">"</span> <span class="nt">-X</span> POST <span class="nt">-H</span> Content-Type:application/json <span class="nt">-d</span> <span class="s1">'{"hubAdmin":true,"password":"","email":""}'</span> <span class="nv">$HZN_EXCHANGE_URL</span>/orgs/root/users/<span class="nv">$HUB_ADMIN_USER</span> | jq
+</code></pre></div>    </div>
+
+    <p><strong>Note:</strong> If the <code class="language-plaintext highlighter-rouge">curl</code> command fails because the user already exists, run the same command except with <code class="language-plaintext highlighter-rouge">-X PUT</code>.</p>
+  </li>
+  <li>
+    <p>Verify that the user has the hub admin user role. In the output of the following command, you should see <code class="language-plaintext highlighter-rouge">"hubAdmin": true</code> .</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn exchange user list <span class="nv">$HUB_ADMIN_USER</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="verify-hub-admin">Use the hub admin user with the Open Horizon CLI</h3>
+
+<p>Create an API key for the hub admin user and verify it has the hub admin capabilities:</p>
+
+<ol>
+  <li>
+    <p>Use <code class="language-plaintext highlighter-rouge">cloudctl</code> to log in to the Open Horizon management hub as the hub admin:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cloudctl login <span class="nt">-a</span> &lt;cluster-url&gt; <span class="nt">-u</span> <span class="nv">$HUB_ADMIN_USER</span> <span class="nt">-p</span> &lt;hub-admin-password&gt; <span class="nt">-c</span> <span class="nv">$IAM_ACCOUNT_ID</span> <span class="nt">--skip-ssl-validation</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create an API key for the hub admin user:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cloudctl iam api-key-create <span class="s2">"</span><span class="k">${</span><span class="nv">HUB_ADMIN_USER</span><span class="k">}</span><span class="s2">-api-key"</span> <span class="nt">-d</span> <span class="s2">"API key for </span><span class="nv">$HUB_ADMIN_USER</span><span class="s2">"</span>
+</code></pre></div>    </div>
+
+    <p>Find the API key value in the command output line that starts with <strong>API Key</strong>. Save the key value in a safe location for future use because you cannot query it from the system later. Also, set it in this variable for the subsequent commands:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">HUB_ADMIN_API_KEY</span><span class="o">=</span>&lt;IAM API key you just created&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Display all the organizations in the management hub. You should see the initial organization that is created during installation, as well as the <strong>root</strong> and <strong>IBM</strong> organizations:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">HZN_ORG_ID</span><span class="o">=</span>root
+<span class="nb">export </span><span class="nv">HZN_EXCHANGE_USER_AUTH</span><span class="o">=</span>root/iamapikey:<span class="nv">$HUB_ADMIN_API_KEY</span>
+hzn exchange org list <span class="nt">-o</span> root
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Log in to the <a href="../console/accessing_ui.md">Open Horizon management console</a> with your hub admin IAM user and password. The organization administration console will be displayed because your login credentials have the hub admin role. Use this console to view, manage, and add organizations. Or, if you prefer, you can add organizations using the CLI in the following section.</p>
+  </li>
+</ol>
+
+<h2 id="create-org">Creating an organization using the CLI</h2>
+
+<p>Organizations can be created using the CLI, as an alternative to using the Open Horizon organization administration console. A prerequisite to creating an organization is to create or choose an IAM account that will be associated with the organization. Another prerequisite is to create or choose an IAM user that will be assigned the organization admin role.</p>
+
+<p>Perform these steps:</p>
+
+<ol>
+  <li>
+    <p>If you have not already done so, create a hub admin user by performing the steps in the previous section. Ensure that the hub admin API key is set in the following variable:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">HUB_ADMIN_API_KEY</span><span class="o">=</span>&lt;IAM API key of the hub admin user&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Use <code class="language-plaintext highlighter-rouge">cloudctl</code> to log in to the Open Horizon management hub as the cluster administrator and create an IAM account that the new Open Horizon organization will be associated with. (If you have not already installed <code class="language-plaintext highlighter-rouge">cloudctl</code>, see <a href="../cli/cloudctl_oc_cli.md">Installing cloudctl, kubectl, and oc</a>.)</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cloudctl login <span class="nt">-a</span> &lt;cluster-url&gt; <span class="nt">-u</span> admin <span class="nt">-p</span> &lt;password&gt; <span class="nt">--skip-ssl-validation</span>
+<span class="nv">NEW_ORG_ID</span><span class="o">=</span>&lt;new organization name&gt;
+<span class="nv">IAM_ACCOUNT_NAME</span><span class="o">=</span><span class="s2">"</span><span class="nv">$NEW_ORG_ID</span><span class="s2">"</span>
+cloudctl iam account-create <span class="s2">"</span><span class="nv">$IAM_ACCOUNT_NAME</span><span class="s2">"</span> <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$IAM_ACCOUNT_NAME</span><span class="s2"> account"</span>
+<span class="nv">IAM_ACCOUNT_ID</span><span class="o">=</span><span class="si">$(</span>cloudctl iam account <span class="s2">"</span><span class="nv">$IAM_ACCOUNT_NAME</span><span class="s2">"</span> | <span class="nb">grep</span> <span class="nt">-E</span> <span class="s1">'^ID'</span> | <span class="nb">awk</span> <span class="s1">'{print $2}'</span><span class="si">)</span>
+<span class="nv">IAM_TEAM_ID</span><span class="o">=</span><span class="si">$(</span>cloudctl iam teams <span class="nt">-s</span> | <span class="nb">grep</span> <span class="nt">-m</span> 1 <span class="s2">"</span><span class="nv">$IAM_ACCOUNT_NAME</span><span class="s2">"</span> | <span class="nb">awk</span> <span class="s1">'{print $1}'</span><span class="si">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create or choose an LDAP user that will be assigned the organization admin role and import it to IAM. <strong>Note:</strong> You cannot use a hub admin user as an organization admin user. But you can use the same organization admin user in more than one IAM account, and therefore allow them to manage more than one Open Horizon organization.</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">ORG_ADMIN_USER</span><span class="o">=</span>&lt;the IAM/LDAP user name of the organization admin user&gt;
+cloudctl iam user-import <span class="nt">-u</span> <span class="nv">$ORG_ADMIN_USER</span>
+cloudctl iam user-onboard <span class="nv">$IAM_ACCOUNT_ID</span> <span class="nt">-r</span> PRIMARY_OWNER <span class="nt">-u</span> <span class="nv">$ORG_ADMIN_USER</span>
+<span class="nv">IAM_RESOURCE_ID</span><span class="o">=</span><span class="si">$(</span>cloudctl iam resources | <span class="nb">grep</span> <span class="s1">':n/ibm-edge:'</span><span class="si">)</span>
+cloudctl iam resource-add <span class="nv">$IAM_TEAM_ID</span> <span class="nt">-r</span> <span class="nv">$IAM_RESOURCE_ID</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Set these environment variables, create the Open Horizon organization, and verify that it exists:
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">HZN_ORG_ID</span><span class="o">=</span>root
+<span class="nb">export </span><span class="nv">HZN_EXCHANGE_USER_AUTH</span><span class="o">=</span>root/iamapikey:<span class="nv">$HUB_ADMIN_API_KEY</span>
+<span class="nb">export </span><span class="nv">HZN_EXCHANGE_URL</span><span class="o">=</span>&lt;URL of your exchange&gt;
+hzn exchange org create <span class="nt">-a</span> IBM/agbot <span class="nt">-t</span> <span class="s2">"cloud_id=</span><span class="nv">$IAM_ACCOUNT_ID</span><span class="s2">"</span> <span class="nt">--description</span> <span class="s2">"</span><span class="nv">$NEW_ORG_ID</span><span class="s2"> organization"</span> <span class="nv">$NEW_ORG_ID</span>
+hzn exchange agbot addpattern IBM/agbot IBM <span class="s1">'*'</span> <span class="nv">$NEW_ORG_ID</span>
+hzn exchange org list <span class="nv">$NEW_ORG_ID</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Assign the organization admin user role to the IAM user you previously chose and verify the user was created in the Open Horizon exchange with the organization admin role:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn exchange user create <span class="nt">-o</span> <span class="nv">$NEW_ORG_ID</span> <span class="nt">-A</span> <span class="nv">$ORG_ADMIN_USER</span> <span class="s2">""</span> <span class="s2">"&lt;email-address&gt;"</span>
+hzn exchange user list <span class="nt">-o</span> <span class="nv">$NEW_ORG_ID</span> <span class="nv">$ORG_ADMIN_USER</span>
+</code></pre></div>    </div>
+
+    <p>In the listing of the user, you should see: <code class="language-plaintext highlighter-rouge">"admin": true</code></p>
+  </li>
+</ol>
+
+<p><strong>Note:</strong> If you create multiple organizations and want the same organization admin to manage all of the organizations, use the same value for <code class="language-plaintext highlighter-rouge">ORG_ADMIN_USER</code> each time through this section.</p>
+
+<p>The organization admin can now use the <a href="../console/accessing_ui.md">Open Horizon management console</a> to manage Open Horizon resources within this organization.</p>
+
+<h3 id="enabling-the-organization-admin-to-use-the-cli">Enabling the organization admin to use the CLI</h3>
+
+<p>In order for an organization admin to use the <code class="language-plaintext highlighter-rouge">hzn exchange</code> command to manage Open Horizon resources using the CLI, they must:</p>
+
+<ol>
+  <li>
+    <p>Use <code class="language-plaintext highlighter-rouge">cloudctl</code> to log in to the Open Horizon management hub and create an API key:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cloudctl login <span class="nt">-a</span> &lt;cluster-url&gt; <span class="nt">-u</span> <span class="nv">$ORG_ADMIN_USER</span> <span class="nt">-p</span> &lt;hub-admin-password&gt; <span class="nt">-c</span> <span class="nv">$IAM_ACCOUNT_ID</span> <span class="nt">--skip-ssl-validation</span>
+cloudctl iam api-key-create <span class="s2">"</span><span class="k">${</span><span class="nv">ORG_ADMIN_USER</span><span class="k">}</span><span class="s2">-api-key"</span> <span class="nt">-d</span> <span class="s2">"API key for </span><span class="nv">$ORG_ADMIN_USER</span><span class="s2">"</span>
+</code></pre></div>    </div>
+
+    <p>Find the API key value in the command output line that starts with <strong>API Key</strong>. Save the key value in a safe location for future use because you cannot query it from the system later. Also, set it in this variable for the subsequent commands:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">ORG_ADMIN_API_KEY</span><span class="o">=</span>&lt;IAM API key you just created&gt;
+</code></pre></div>    </div>
+
+    <p><strong>Tip:</strong> If you add this user to additional IAM accounts in the future, you do not need to create an API key for each account. The same API key will work in all IAM accounts this user is a member of, and therefore in all Open Horizon organizations this user is a member of.</p>
+  </li>
+  <li>
+    <p>Verify the API key works with the <code class="language-plaintext highlighter-rouge">hzn exchange</code> command:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">HZN_ORG_ID</span><span class="o">=</span>&lt;organization <span class="nb">id</span><span class="o">&gt;</span>
+<span class="nb">export </span><span class="nv">HZN_EXCHANGE_USER_AUTH</span><span class="o">=</span>root/iamapikey:<span class="nv">$ORG_ADMIN_API_KEY</span>
+hzn exchange user list
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>The new organization is ready to use. To set a maximum number of edge nodes in this organization, or customize the default edge node heartbeat settings, see <a href="#org-config">Organization Configuration</a>.</p>
+
+<h2 id="org-users">Non-admin users within an organization</h2>
+
+<p>A new user can be added to an organization by importing and onboarding the IAM user (as a <code class="language-plaintext highlighter-rouge">MEMBER</code>) to the corresponding IAM account. You do not need to explicitly add the user to the Open Horizon exchange, because that occurs automatically when necessary.</p>
+
+<p>The user can then use the <a href="../console/accessing_ui.md">Open Horizon management console</a>. In order for the user to use the <code class="language-plaintext highlighter-rouge">hzn exchange</code> CLI, they must:</p>
+
+<ol>
+  <li>
+    <p>Use <code class="language-plaintext highlighter-rouge">cloudctl</code> to log in to the Open Horizon management hub and create an API key:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">IAM_USER</span><span class="o">=</span>&lt;iam user&gt;
+cloudctl login <span class="nt">-a</span> &lt;cluster-url&gt; <span class="nt">-u</span> <span class="nv">$IAM_USER</span> <span class="nt">-p</span> &lt;hub-admin-password&gt; <span class="nt">-c</span> <span class="nv">$IAM_ACCOUNT_ID</span> <span class="nt">--skip-ssl-validation</span>
+cloudctl iam api-key-create <span class="s2">"</span><span class="k">${</span><span class="nv">IAM_USER</span><span class="k">}</span><span class="s2">-api-key"</span> <span class="nt">-d</span> <span class="s2">"API key for </span><span class="nv">$IAM_USER</span><span class="s2">"</span>
+</code></pre></div>    </div>
+
+    <p>Find the API key value in the command output line that starts with <strong>API Key</strong>. Save the key value in a safe location for future use because you cannot query it from the system later. Also, set it in this variable for the subsequent commands:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">IAM_USER_API_KEY</span><span class="o">=</span>&lt;IAM API key you just created&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Set these environment variables and verify the user:</p>
+  </li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">HZN_ORG_ID</span><span class="o">=</span>&lt;organization-id&gt;
+<span class="nb">export </span><span class="nv">HZN_EXCHANGE_USER_AUTH</span><span class="o">=</span>iamapikey:<span class="nv">$IAM_USER_API_KEY</span>
+hzn exchange user list
+</code></pre></div></div>
+
+<h2 id="ibm-org">The IBM organization</h2>
+
+<p>The IBM organization is a unique organization that provides predefined services and patterns that are intended to be technology examples that are usable by any user in any organization. The IBM organization is automatically created when the Open Horizon management hub is installed.</p>
+
+<p><strong>Note:</strong> Although the resources in the IBM organization are public, the IBM organization is not intended to hold all public content in the Open Horizon management hub.</p>
+
+<h2 id="org-config">Organization Configuration</h2>
+
+<p>Every Open Horizon organization has the following settings. The default values for these settings are often sufficient. If you choose to customize any of the settings, run the command <code class="language-plaintext highlighter-rouge">hzn exchange org update -h</code> to see the command flags that can be used.</p>
+
+<table caption="Table 3. Organization settings" caption-side="top">
+  <thead>
+    <tr>
+      <th><strong>Setting</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td>A description of the organization.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">label</code></td>
+      <td>The name of the organization. This value is used to display the organization name in the Open Horizon management console.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">heartbeatIntervals</code></td>
+      <td>How often edge node agents in the organization poll the management hub for instructions. See the following section for details.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">limits</code></td>
+      <td>Limits for this organization. Currently the only limit is <code class="language-plaintext highlighter-rouge">maxNodes</code>, which is the maximum number of edge nodes allowed in this organization. There is a practical limit to the total number of edge nodes that a single Open Horizon management hub can support. This setting enables the hub admin user to limit the number of nodes that each organization can have, which prevents one organization from using all of the capacity. A value of <code class="language-plaintext highlighter-rouge">0</code> means no limit.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="agent-hb">Agent heartbeat polling interval</h3>
+
+<p>The Open Horizon agent that is installed on every edge node periodically heartbeats to the management hub to let the management hub know it is still running and connected, and to receive instructions. You only need to change these settings for exceedingly high scale environments.</p>
+
+<p>The heartbeat interval is the amount of time the agent waits between heartbeats to the management hub. The interval is adjusted automatically over time to optimize responsiveness and reduce the load on the management hub. The interval adjustment is controlled by three settings:</p>
+
+<table caption="Table 4. heartbeatIntervals settings" caption-side="top">
+  <thead>
+    <tr>
+      <th><strong>Setting</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">minInterval</code></td>
+      <td>The shortest amount of time (in seconds) the agent should wait between heartbeats to the management hub. When an agent is registered, it starts polling at this interval. The interval will never be less than this value. A value of <code class="language-plaintext highlighter-rouge">0</code> means use the default value.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">maxInterval</code></td>
+      <td>The longest amount of time (in seconds) the agent should wait between heartbeats to the management hub. A value of <code class="language-plaintext highlighter-rouge">0</code> means use the default value.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">intervalAdjustment</code></td>
+      <td>The number of seconds to add to the current heartbeat interval when the agent detects that it can increase the interval. After successfully heartbeating to the management hub, but receiving no instructions for some time, the heartbeat interval is gradually increased until it reaches the maximum heartbeat interval. Likewise, when instructions are received, the heartbeat interval is decreased to ensure that subsequent instructions are processed quickly. A value of <code class="language-plaintext highlighter-rouge">0</code> means use the default value.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The heartbeat polling interval settings in the organization are applied to nodes that have not explicitly configured the heartbeat interval. To check whether a node has explicitly set the heartbeat interval setting, use <code class="language-plaintext highlighter-rouge">hzn exchange node list &lt;node id&gt;</code>.</p>
+
+<p>For more information about configuring settings in high-scale environments, see <a href="/docs/hub/configuration.html#scale">Scaling Configuration</a>.</p>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/developing/cicd_process.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/developing/cicd_process.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="edge_native_practices">CI-CD process for edge services</h1>
+
+<p>A set of evolving edge services is essential for the effective use of Open Horizon (Open Horizon), and a robust Continuous Integration and Continuous Deployment (CI/CD) process is a critical component.</p>
+
+<p>Use this content to lay out the building blocks available for you to create your own CI/CD process. Then, learn more about this process in the <a href="https://github.com/open-horizon/examples"><code class="language-plaintext highlighter-rouge">open-horizon/examples</code> repository <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>. </p>
+
+<h2 id="config_variables">Configuration variables</h2>
+
+<p>As an Edge services developer, consider the service container size under development. Based on that information, you might need to divide your service features into separate containers. In this situation, configuration variables that are used for testing purposes can help simulate data that comes from a not-yet developed container. In the <a href="https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/horizon/service.definition.json">cpu2evtstreams service definition file <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>, you can see input variables like <strong>PUBLISH</strong> and <strong>MOCK</strong>. If you examine the <code class="language-plaintext highlighter-rouge">service.sh</code> code, you see that it uses these, and other configuration variables to control its behavior. <strong>PUBLISH</strong> controls if the code attempts to send messages to IBM Event Streams. <strong>MOCK</strong> controls if service.sh attempts to contact the REST APIs and its dependent services (cpu and gps) or if <code class="language-plaintext highlighter-rouge">service.sh</code> creates fake data.</p>
+
+<p>At the time of service deployment, you can override the configuration variable default values by specifying them in the node definition or on the <code class="language-plaintext highlighter-rouge">hzn register</code> command.</p>
+
+<h2 id="cross_compiling">Cross-compiling</h2>
+
+<p>You can use Docker to build a containerized service for multiple architectures from a single amd64 machine. Similarly, you can develop edge services with compiled programming languages that support cross-compilation, such as Go. For example, if you are writing code on your Mac (an amd64 architecture device) for an arm device (a Raspberry Pi), you might need to build a Docker container that specifies parameters like GOARCH to target arm. This set up can prevent deployment errors. See <a href="https://github.com/open-horizon/examples/tree/master/edge/services/gps">open-horizon gps service <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>. </p>
+
+<h2 id="testing">Testing</h2>
+
+<p>Frequent and automated testing is an important part of the development process. To facilitate testing, you can use the <code class="language-plaintext highlighter-rouge">hzn dev service start</code> command to run your service in a simulated Horizon agent environment. This approach is also useful in devops environments where it might be problematic to install and register the full Horizon agent. This method automates services tests in the <code class="language-plaintext highlighter-rouge">open-horizon examples</code> repository with the <strong>make test</strong> target. See <a href="https://github.com/open-horizon/examples/blob/305c4f375aafb09733f244ec9a899ce136b6d311/edge/services/helloworld/Makefile#L30">make test target <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<p>Run <strong>make test</strong> to build and run the service that uses <strong>hzn dev service start</strong>. After that is running, <a href="https://github.com/open-horizon/examples/blob/master/tools/serviceTest.sh">serviceTest.sh <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> monitors the service logs to locate data that indicates the service is running correctly. </p>
+
+<h2 id="testing_deployment">Testing deployment</h2>
+
+<p>When you are developing a new service version, access to a full, real-world test is ideal. To do this, you can deploy your service to edge nodes; however, because this is a test, you might not want to initially deploy your service to all of your edge nodes.</p>
+
+<p>To do this, create a deployment policy or pattern that refers only to your new service version. Then, register your testing nodes with this new policy or pattern. If using a policy, one option is to set a property on an edge node. For example, “name”: “mode”, “value”: “testing”), and add that constraint to your deployment policy (“mode == testing”). This lets you be sure only the nodes you set aside for testing receive the new version of your service. </p>
+
+<p>Note: You can also create a deployment policy or pattern from the management console. See <a href="../console/accessing_ui.md">Using the management console</a>.</p>
+
+<h2 id="production_deployment">Production deployment</h2>
+
+<p>After you move the new version of your service from a testing to a production environment, issues that were not encountered during testing can occur. Your deployment policy or pattern rollback settings are useful in addressing these issues. In a pattern or deployment policy <code class="language-plaintext highlighter-rouge">serviceVersions</code> section, you can specify multiple, older versions of your service. Give each version a priority for your edge node to roll back to if there is an error with your new version. In addition to assigning a priority to each rollback version, you can specify things like number and duration of retry attempts before falling back to a lower priority version of the specified service. For the specific syntax, see <a href="https://github.com/open-horizon/anax/blob/master/cli/samples/business_policy.json">this deployment policy example <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<h2 id="viewing_edge_nodes">Viewing your edge nodes</h2>
+
+<p>After deploying a new version of your service to nodes, it is important to be able to monitor the health of your edge nodes easily. Use the Open Horizon management console for this task. For example, when you are in the <a href="#testing_deployment">Testing deployment</a> or <a href="#production_deployment">Production deployment</a> process, you can quickly search for nodes that use your deployment policy, or nodes with errors.</p>
+
+<h2 id="migrating_services">Migrating services</h2>
+
+<p>At some point, you might need to move services, patterns, or policies from one instance of Open Horizon to another. Similarly, you might need to move services from one exchange organization to another. This might happen if you installed a new instance of Open Horizon to a different host environment. Alternatively, you might need to move services if you have two Open Horizon instances, one dedicated to development and another for production. To facilitate this process, you can use the <a href="https://github.com/open-horizon/examples/blob/master/tools/loadResources"><code class="language-plaintext highlighter-rouge">loadResources</code> script <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> in the open-horizon examples repository. </p>
+
+<h2 id="testing_with_travis">Automated pull request testing with Travis</h2>
+
+<p>You can automate testing whenever a pull request (PR) is opened to your GitHub repository by using <a href="https://travis-ci.com">Travis CI <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<p>Continue reading this content to learn how to leverage Travis and the techniques in the open-horizon examples GitHub repository. </p>
+
+<p>In the examples repository, Travis CI is used to build, test, and publish samples. In the <a href="https://github.com/open-horizon/examples/blob/master/.travis.yml"><code class="language-plaintext highlighter-rouge">.travis.yml</code> file <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>, a virtual environment is set up to run as a Linux amd64 machine with hzn, Docker, and <a href="https://github.com/multiarch/qemu-user-static">qemu <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> for building on multiple architectures.</p>
+
+<p>In this scenario, kafkacat is also installed to let cpu2evtstreams send data to IBM Event Streams. Similar to using the command line, Travis can use environment variables like <code class="language-plaintext highlighter-rouge">EVTSTREAMS_TOPIC</code> and <code class="language-plaintext highlighter-rouge">HZN_DEVICE_ID</code> for use with the sample edge services. The HZN_EXCHANGE_URL is set to point to the staging exchange for publishing any modified services. </p>
+
+<p>The <a href="https://github.com/open-horizon/examples/blob/master/tools/travis-find">travis-find <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> script is then used to identify services that have been modified by the opened pull request.</p>
+
+<p>If a sample has been modified, the <code class="language-plaintext highlighter-rouge">test-all-arches</code> target in the <strong>makefile</strong> of that service runs. With the qemu containers of the supported architectures running, cross-architecture builds run with this <strong>makefile</strong> target by setting the <code class="language-plaintext highlighter-rouge">ARCH</code> environment variable immediately before building and testing.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">hzn dev service start</code> command runs the edge service, and the <a href="https://github.com/open-horizon/examples/blob/master/tools/serviceTest.sh">serviceTest.sh <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> file monitors the service logs to determine if the service is operating correctly.</p>
+
+<p>See <a href="https://github.com/open-horizon/examples/blob/afd4a5822aede44616eb5da7cd9dafd4d78f12ec/edge/services/helloworld/Makefile#L24">helloworld Makefile <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> to view the dedicated <code class="language-plaintext highlighter-rouge">test-all-arches</code> Makefile target.</p>
+
+<p>The following scenario demonstrates a more thorough end-to-end test. If one of the modified samples includes <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code>, an instance of IBM Event Streams can be monitored in the background and checked for HZN_DEVICE_ID. It can pass the test and be added to a list of all the passing services, only if it finds the <strong>travis-test</strong> node ID in the data read from the cpu2evtstreams topic. This requires an IBM Event Streams API key and broker url that are set as secret environment variables.</p>
+
+<p>After the PR is merged, this process is repeated, and the list of passing services is used to identify which services can be published to the exchange. The Travis secret environment variables that are used in this example include everything that is needed to push, sign, and publish services to the exchange. This includes Docker credentials, HZN_EXCHANGE_USER_AUTH, and a cryptographic signing key pair that can be obtained with the <code class="language-plaintext highlighter-rouge">hzn key create</code> command. In order to save the signing keys as secure environment variables, they must be base64 encoded.</p>
+
+<p>The list of services that passed the functional test is used to identify which services should be published with the dedicated publish <code class="language-plaintext highlighter-rouge">Makefile</code> target. See <a href="https://github.com/open-horizon/examples/blob/afd4a5822aede44616eb5da7cd9dafd4d78f12ec/edge/services/helloworld/Makefile#L45">helloworld sample <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<p>Because the services have been built and tested, this target publishes the service, service policy, pattern, and deployment policy in all architectures to the exchange. </p>
+
+<p>Note: Also, you can perform many of these tasks from the management console. See <a href="../console/accessing_ui.md">Using the management console</a>.</p>
+
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

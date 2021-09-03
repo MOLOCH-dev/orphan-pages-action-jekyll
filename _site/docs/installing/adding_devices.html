@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/installing/adding_devices.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/installing/adding_devices.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="installing_the_agent">Preparing an edge device</h1>
+
+<p>The following instructions guide you through the process of installing the required software on your edge device and registering it with Open Horizon (Open Horizon).</p>
+
+<h2 id="suparch-horizon">Supported architectures and operating systems</h2>
+
+<p>Open Horizon supports architectures and operating systems with the following hardware architectures:</p>
+
+<ul>
+  <li>Linux x86_64 devices or virtual machines that run Ubuntu 20.x (focal), Ubuntu 18.x (bionic), Debian 10 (buster), Debian 9 (stretch)</li>
+  <li>Red Hat Enterprise Linux® 8.2</li>
+  <li>Fedora Workstation 32</li>
+  <li>CentOS 8.2</li>
+  <li>SuSE 15 SP2</li>
+  <li>Linux on ARM (32-bit), for example Raspberry Pi, running Raspbian buster or stretch</li>
+  <li>Linux on ARM (64-bit), for example NVIDIA Jetson Nano, TX1, or TX2, running Ubuntu 18.x (bionic)</li>
+  <li>macOS</li>
+</ul>
+
+<p><strong>Notes</strong>:</p>
+
+<ul>
+  <li>Installation of edge devices with Fedora or SuSE is only supported by the <a href="/docs/installing/advanced_man_install.html">Advanced manual agent installation and registration</a> method.</li>
+  <li>CentOS and Red Hat Enterprise Linux® currently support Docker only as a container engine in Open Horizon.</li>
+</ul>
+
+<h2 id="size">Sizing</h2>
+
+<p>The agent requires:</p>
+
+<ul>
+  <li>100 MB random access memory (RAM), including docker. RAM increases this amount by approximately 100 K per agreement, plus any additional memory that is required by workloads that run on the device.</li>
+  <li>400 MB disk (including docker). Disk increases this amount based on the size of the container images that are used by workloads and the size of the model objects (times 2) that are deployed to the device.</li>
+</ul>
+
+<h1 id="installing_the_agent">Installing the agent</h1>
+
+<p>The following instructions guide you through the process of installing the required software on your edge device and registering it with Open Horizon.</p>
+
+<h2 id="install-config">Procedures</h2>
+
+<p>To install and configure your edge device, click the link that represents your edge device type:</p>
+
+<ul>
+  <li><a href="#x86-machines">Linux x86_64 devices or virtual machines</a></li>
+  <li><a href="#arm-32-bit">Linux on ARM (32-bit)</a>; for example, Raspberry Pi running Raspbian</li>
+  <li><a href="#arm-64-bit">Linux on ARM (64-bit)</a>; for example, NVIDIA Jetson Nano, TX1, or TX2</li>
+  <li><a href="#mac-os-x">macOS</a></li>
+</ul>
+
+<h2 id="x86-machines">Linux x86_64 devices or virtual machines</h2>
+
+<h3 id="hard-req-x86">Hardware requirements</h3>
+
+<ul>
+  <li>64-bit Intel® or AMD device or virtual machine</li>
+  <li>An internet connection for your device (wired or wifi)</li>
+  <li>(optional) Sensor hardware: Many Horizon edge services require specialized sensor hardware.</li>
+</ul>
+
+<h3 id="proc-x86">Procedure</h3>
+
+<p>Prepare your device by installing a Debian or Ubuntu Linux. The instructions in this content are based on a device that uses Ubuntu 18.x.</p>
+
+<p>Install the most recent version of Docker on your device. For more information, see <a href="https://docs.docker.com/engine/install/ubuntu/">Install Docker <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<p>Now that your edge device is prepared, continue on to <a href="/docs/installing/registration.html">Installing the agent</a>.</p>
+
+<h2 id="arm-32-bit">Linux on ARM (32-bit)</h2>
+
+<h3 id="hard-req-pi">Hardware requirements</h3>
+
+<ul>
+  <li>Raspberry Pi 3A+, 3B, 3B+, or 4 (preferred)</li>
+  <li>Raspberry Pi A+, B+, 2B, Zero-W, or Zero-WH</li>
+  <li>MicroSD flash card (32 GB preferred)</li>
+  <li>An appropriate power supply for your device (2 Amp or greater preferred)</li>
+  <li>An internet connection for your device (wired or wifi).
+Note: Some devices require extra hardware for supporting wifi.</li>
+  <li>(optional) Sensor hardware: Many Horizon edge services require specialized sensor hardware.</li>
+</ul>
+
+<h3 id="proc-pi">Procedure</h3>
+
+<ol>
+  <li>Prepare your Raspberry Pi device.
+    <ol>
+      <li>
+        <p>Flash the <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> Linux image onto your MicroSD card.</p>
+
+        <p>For more information about how to flash MicroSD images from many operating systems, see <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">Raspberry Pi Foundation <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.
+These instructions use Raspbian for wifi and SSH configurations.</p>
+
+        <p><strong>Warning:</strong> Flashing an image onto your MicroSD card permanently erases any data that is already on your card.</p>
+      </li>
+      <li>
+        <p>(optional) If you plan to use wifi to connect to your device, edit your newly flashed image to provide the appropriate WPA2 wifi credentials.</p>
+
+        <p>If you plan to use a wired network connection, you do not need to complete this step.</p>
+
+        <p>On your MicroSD card, create a file that is named <code class="language-plaintext highlighter-rouge">wpa_supplicant.conf</code> within the root level folder that contains your wifi credentials. These credentials include your network SSID name and passphrase. Use the following format for your file:</p>
+
+        <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>country=US
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev update_config=1
+network={
+ssid=“&lt;your-network-ssid&gt;”
+psk=“&lt;your-network-passphrase”
+key_mgmt=WPA-PSK&gt;
+}
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>(optional) If you want or need to run a Raspberry Pi device with no monitor or keyboard, you need to enable SSH connection access to your device. SSH access is unavailable by default.</p>
+
+        <p>To enable the SSH connection, create an empty file on your MicroSD card that is named <code class="language-plaintext highlighter-rouge">ssh</code>. Include this file in the root level folder for your card. The inclusion of this file provides you with the ability to connect to your device with the default credentials.</p>
+      </li>
+      <li>
+        <p>Unmount your MicroSD card. Ensure that you safely eject the card from the device that you are using to edit the card so that all of your changes are written.</p>
+      </li>
+      <li>
+        <p>Insert the MicroSD card into your Raspberry Pi device. Attach any optional sensor hardware and connect the device to your power supply.</p>
+      </li>
+      <li>
+        <p>Start your device.</p>
+      </li>
+      <li>
+        <p>Change the default password for your device. In Raspbian flash images, the default account uses the login name <code class="language-plaintext highlighter-rouge">pi</code> and the default password <code class="language-plaintext highlighter-rouge">raspberry</code>.</p>
+
+        <p>Log in to this account. Use the standard Linux <code class="language-plaintext highlighter-rouge">passwd</code> command to change the default password:</p>
+
+        <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>passwd
+Enter new UNIX password:  
+Retype new UNIX password:
+passwd: password updated successfully
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Install the most recent version of Docker on your device. For more information, see <a href="https://docs.docker.com/engine/install/debian/">Install Docker <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<p>Now that your edge device is prepared, continue on to <a href="/docs/installing/registration.html">Installing the agent</a>.</p>
+
+<h2 id="arm-64-bit">Linux on ARM (64-bit)</h2>
+
+<h3 id="hard-req-nvidia">Hardware requirements</h3>
+
+<ul>
+  <li>NVIDIA Jetson Nano, or TX2 (recommended)</li>
+  <li>NVIDIA Jetson TX1</li>
+  <li>HDMI Business Monitor, USB hub, USB keyboard, USB mouse</li>
+  <li>Storage: at least 10 GB (SSD recommended)</li>
+  <li>An internet connection for your device (wired or wifi)</li>
+  <li>(optional) Sensor hardware: Many Horizon edge services require specialized sensor hardware.</li>
+</ul>
+
+<h3 id="proc-nvidia">Procedure</h3>
+
+<ol>
+  <li>Prepare your NVIDIA Jetson device.
+    <ol>
+      <li>Install the most recent NVIDIA JetPack on your device. For more information, see:
+        <ul>
+          <li>(TX1) <a href="https://elinux.org/Jetson_TX1">Jetson TX1 <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a></li>
+          <li>(TX2) <a href="https://developer.nvidia.com/embedded/jetson-tx2-developer-kit">Harness AI at the Edge with the Jetson TX2 Developer Kit <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a></li>
+          <li>(Nano) <a href="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit">Getting Started With Jetson Nano Developer Kit <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a></li>
+        </ul>
+
+        <p>You need to install this software and any prerequisite software before you install the Horizon software.</p>
+      </li>
+      <li>
+        <p>Change the default password. In the JetPack installation procedure, the default account uses the login name <code class="language-plaintext highlighter-rouge">nvidia</code> and the default password <code class="language-plaintext highlighter-rouge">nvidia</code>.</p>
+
+        <p>Log in to this account. Use the standard Linux <code class="language-plaintext highlighter-rouge">passwd</code> command to change the default password:</p>
+
+        <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>passwd
+Enter new UNIX password:  
+Retype new UNIX password: 
+passwd: password updated successfully
+</code></pre></div>        </div>
+      </li>
+      <li>Install the most recent version of Docker on your device. For more information, see <a href="https://docs.docker.com/engine/install/debian/">Install Docker <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</li>
+    </ol>
+  </li>
+</ol>
+
+<p>Now that your edge device is prepared, continue on to <a href="/docs/installing/registration.html">Installing the agent</a>.</p>
+
+<h2 id="mac-os-x">macOS</h2>
+
+<h3 id="hard-req-mac">Hardware requirements</h3>
+
+<ul id="proc-mac">
+  <li>2010 or later 64-bit Intel® Mac device</li>
+  <li>MMU virtualization is required.</li>
+  <li>MacOS X version 10.11 (“El Capitan”) or later</li>
+  <li>An internet connection for your machine (wired or wifi)</li>
+  <li>(optional) Sensor hardware: Many Horizon edge services require specialized sensor hardware.
+    <h3 id="procedure">Procedure</h3>
+  </li>
+</ul>
+
+<ol>
+  <li>Prepare your device.
+    <ol>
+      <li>
+        <p>Install the most recent version of Docker on your device. For more information, see <a href="https://docs.docker.com/docker-for-mac/install/">Install Docker <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+      </li>
+      <li>
+        <p><strong>Install socat</strong>. You can use either of the following methods to install socat:</p>
+
+        <ul>
+          <li>
+            <p><a href="https://brewinstall.org/install-socat-on-mac-with-brew/">Use Homebrew to install socat <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+          </li>
+          <li>
+            <p>If MacPorts are already installed, use it to install socat:</p>
+            <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo port install socat
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="whats-next">What’s next</h2>
+
+<ul>
+  <li><a href="/docs/installing/registration.html">Installing the agent</a></li>
+  <li><a href="/docs/installing/updating_the_agent.html">Updating the agent</a></li>
+</ul>
+
+<h2 id="related-information">Related information</h2>
+
+<ul>
+  <li><a href="/docs/hub/online_installation.html">Install Open Horizon</a></li>
+  <li><a href="/docs/installing/advanced_man_install.html">Advanced manual installation and registration of an agent</a></li>
+</ul>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

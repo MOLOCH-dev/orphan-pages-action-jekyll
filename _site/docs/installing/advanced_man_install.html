@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/installing/advanced_man_install.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/installing/advanced_man_install.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="advanced_man_install">Advanced manual agent installation and registration</h1>
+
+<p class="shortdesc">This content describes each manual step to install the Open Horizon agent on an edge device and register it. For a more automated method, see <a href="/docs/installing/automated_install.html">Automated agent installation and registration</a>.</p>
+
+<h2 id="agent_install">Installing the agent</h2>
+
+<p><strong>Note</strong>: For more information about command syntax, see <a href="/docs/getting_started/document_conventions.html">Conventions used in this document</a>.</p>
+
+<ol>
+  <li>
+    <p>Obtain the <code class="language-plaintext highlighter-rouge">agentInstallFiles-&lt;edge-device-type&gt;.tar.gz</code> file before you continue and the API Key that is created along with this file before continuing this process.</p>
+
+    <p>As a post-configuration step for <a href="/docs/hub/online_installation.html">Installing the management hub</a>, a compressed file was crated for you. This file that contains the necessary files to install the Horizon agent on your edge device and register it with the helloworld example.</p>
+  </li>
+  <li>
+    <p>Copy this file to the edge device with a USB stick, the secure copy command, or another method.</p>
+  </li>
+  <li>
+    <p>Expand the tar file:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-zxvf</span> agentInstallFiles-&lt;edge-device-type&gt;.tar.gz
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Use whichever following section that applies to your type of edge device.</p>
+  </li>
+</ol>
+
+<h3 id="agent_install_linux">Installing the agent on Linux (ARM 32-bit, ARM 64-bit, or x86_64) edge devices or virtual machines</h3>
+
+<p>Follow these steps:</p>
+
+<ol>
+  <li>
+    <p>Log in, and if you are logged in as a non-root user, switch to a user with root privileges:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> <span class="nt">-s</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Query the Docker version to check whether it is recent enough:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nt">--version</span>
+</code></pre></div>    </div>
+
+    <p>If docker is not installed, or the version is older than <code class="language-plaintext highlighter-rouge">18.06.01</code>, install the most recent version of Docker:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-fsSL</span> get.docker.com | sh
+docker <span class="nt">--version</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Install the Horizon Debian packages that you copied to this edge device:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt update <span class="o">&amp;&amp;</span> apt <span class="nb">install</span> ./<span class="k">*</span>horizon<span class="k">*</span>.deb
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Set your specific information as environment variables:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">eval export</span> <span class="si">$(</span><span class="nb">cat </span>agent-install.cfg<span class="si">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Point your edge device horizon agent to your Open Horizon cluster by populating <code class="language-plaintext highlighter-rouge">/etc/default/horizon</code> with the correct information:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sed</span> <span class="nt">-i</span>.bak <span class="nt">-e</span> <span class="s2">"s|^HZN_EXCHANGE_URL=[^ ]*|HZN_EXCHANGE_URL=</span><span class="k">${</span><span class="nv">HZN_EXCHANGE_URL</span><span class="k">}</span><span class="s2">|g"</span> <span class="nt">-e</span> <span class="s2">"s|^HZN_FSS_CSSURL=[^ ]*|HZN_FSS_CSSURL=</span><span class="k">${</span><span class="nv">HZN_FSS_CSSURL</span><span class="k">}</span><span class="s2">|g"</span> /etc/default/horizon
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Have the horizon agent trust <code class="language-plaintext highlighter-rouge">agent-install.crt</code>:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if </span><span class="nb">grep</span> <span class="nt">-qE</span> <span class="s1">'^HZN_MGMT_HUB_CERT_PATH='</span> /etc/default/horizon<span class="p">;</span> <span class="k">then </span><span class="nb">sed</span> <span class="nt">-i</span>.bak <span class="nt">-e</span> <span class="s2">"s|^HZN_MGMT_HUB_CERT_PATH=[^ ]*|HZN_MGMT_HUB_CERT_PATH=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span><span class="s2">/agent-install.crt|"</span> /etc/default/horizon<span class="p">;</span> <span class="k">else </span><span class="nb">echo</span> <span class="s2">"HZN_MGMT_HUB_CERT_PATH=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span><span class="s2">/agent-install.crt"</span> <span class="o">&gt;&gt;</span> /etc/default/horizon<span class="p">;</span> <span class="k">fi</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Restart the agent to pick up the changes to <code class="language-plaintext highlighter-rouge">/etc/default/horizon</code>:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart horizon.service
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Verify that the agent is running and correctly configured:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hzn version
+hzn exchange version
+hzn node list
+</code></pre></div>    </div>
+
+    <p>The output should look similar to this example (version numbers and URLs might be different):</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>hzn version
+Horizon CLI version: 2.23.29
+Horizon Agent version: 2.23.29
+<span class="nv">$ </span>hzn exchange version
+1.116.0
+<span class="nv">$ </span>hzn node list
+<span class="o">{</span>
+      <span class="s2">"id"</span>: <span class="s2">""</span>,
+      <span class="s2">"organization"</span>: null,
+      <span class="s2">"pattern"</span>: null,
+      <span class="s2">"name"</span>: null,
+      <span class="s2">"token_last_valid_time"</span>: <span class="s2">""</span>,
+      <span class="s2">"token_valid"</span>: null,
+      <span class="s2">"ha"</span>: null,
+      <span class="s2">"configstate"</span>: <span class="o">{</span>
+         <span class="s2">"state"</span>: <span class="s2">"unconfigured"</span>,
+         <span class="s2">"last_update_time"</span>: <span class="s2">""</span>
+      <span class="o">}</span>,
+      <span class="s2">"configuration"</span>: <span class="o">{</span>
+         <span class="s2">"exchange_api"</span>: <span class="s2">"https://9.30.210.34:8443/ec-exchange/v1/"</span>,
+         <span class="s2">"exchange_version"</span>: <span class="s2">"1.116.0"</span>,
+         <span class="s2">"required_minimum_exchange_version"</span>: <span class="s2">"1.116.0"</span>,
+         <span class="s2">"preferred_exchange_version"</span>: <span class="s2">"1.116.0"</span>,
+         <span class="s2">"mms_api"</span>: <span class="s2">"https://9.30.210.34:8443/ec-css"</span>,
+         <span class="s2">"architecture"</span>: <span class="s2">"amd64"</span>,
+         <span class="s2">"horizon_version"</span>: <span class="s2">"2.23.29"</span>
+      <span class="o">}</span>,
+      <span class="s2">"connectivity"</span>: <span class="o">{</span>
+         <span class="s2">"firmware.bluehorizon.network"</span>: <span class="nb">true</span>,
+         <span class="s2">"images.bluehorizon.network"</span>: <span class="nb">true</span>
+      <span class="o">}</span>
+   <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you previously switched to the privileged shell, exit it now. You do not need root access for the next step of registering your device.</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">exit</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Continue on to <a href="#agent_reg">Registering the agent</a>.</p>
+  </li>
+</ol>
+
+<h3 id="mac-os-x">Installing the agent on a macOS edge device</h3>
+
+<ol>
+  <li>
+    <p>Import the <code class="language-plaintext highlighter-rouge">horizon-cli</code> package certificate into your macOS keychain:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>security add-trusted-cert <span class="nt">-d</span> <span class="nt">-r</span> trustRoot <span class="nt">-k</span> /Library/Keychains/System.keychain horizon-cli.crt
+</code></pre></div>    </div>
+
+    <p>Note: You need to complete this step only one time on each macOS machine. With this trusted certificate imported, you can install any future version of the Horizon software.</p>
+  </li>
+  <li>
+    <p>Install the Horizon CLI package:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>installer <span class="nt">-pkg</span> horizon-cli-<span class="k">*</span>.pkg <span class="nt">-target</span> /
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Enable subcommand name completion for the <code class="language-plaintext highlighter-rouge">hzn</code> command, by adding the following to <code class="language-plaintext highlighter-rouge">~/.bashrc</code>:</p>
+  </li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">source</span> /usr/local/share/horizon/hzn_bash_autocomplete.sh
+</code></pre></div></div>
+
+<ol>
+  <li>When you are installing a <strong>new device</strong>, this step is not necessary. But if you installed and started the horizon container on this machine previously, stop it now by running:</li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  horizon-container stop
+</code></pre></div></div>
+<ol>
+  <li>Set your specific information as environment variables:</li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">eval export</span> <span class="si">$(</span><span class="nb">cat </span>agent-install.cfg<span class="si">)</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Point your edge device horizon agent to your Open Horizon cluster by populating <code class="language-plaintext highlighter-rouge">/etc/default/horizon</code> with the correct information:</li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo mkdir</span> <span class="nt">-p</span> /etc/default
+
+  <span class="nb">sudo </span>sh <span class="nt">-c</span> <span class="s2">"cat &lt;&lt; EndOfContent &gt; /etc/default/horizon
+  HZN_EXCHANGE_URL=</span><span class="nv">$HZN_EXCHANGE_URL</span><span class="s2">
+  HZN_FSS_CSSURL=</span><span class="nv">$HZN_FSS_CSSURL</span><span class="s2">
+  HZN_MGMT_HUB_CERT_PATH=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span><span class="s2">/agent-install.crt
+  HZN_DEVICE_ID=</span><span class="si">$(</span><span class="nb">hostname</span><span class="si">)</span><span class="s2">
+  EndOfContent"</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Start the Horizon agent:</li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  horizon-container start
+</code></pre></div></div>
+
+<ol>
+  <li>Verify that the agent is running and correctly configured:</li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  hzn version
+  hzn exchange version
+  hzn node list
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  The output should look similar to this (version numbers and URLs might be different):
+</code></pre></div></div>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>hzn version
+  Horizon CLI version: 2.23.29
+  Horizon Agent version: 2.23.29
+  <span class="nv">$ </span>hzn exchange version
+  1.116.0
+  <span class="nv">$ </span>hzn node list
+      <span class="o">{</span>
+         <span class="s2">"id"</span>: <span class="s2">""</span>,
+         <span class="s2">"organization"</span>: null,
+         <span class="s2">"pattern"</span>: null,
+         <span class="s2">"name"</span>: null,
+         <span class="s2">"token_last_valid_time"</span>: <span class="s2">""</span>,
+         <span class="s2">"token_valid"</span>: null,
+         <span class="s2">"ha"</span>: null,
+         <span class="s2">"configstate"</span>: <span class="o">{</span>
+            <span class="s2">"state"</span>: <span class="s2">"unconfigured"</span>,
+            <span class="s2">"last_update_time"</span>: <span class="s2">""</span>
+         <span class="o">}</span>,
+         <span class="s2">"configuration"</span>: <span class="o">{</span>
+            <span class="s2">"exchange_api"</span>: <span class="s2">"https://9.30.210.34:8443/ec-exchange/v1/"</span>,
+            <span class="s2">"exchange_version"</span>: <span class="s2">"1.116.0"</span>,
+            <span class="s2">"required_minimum_exchange_version"</span>: <span class="s2">"1.116.0"</span>,
+            <span class="s2">"preferred_exchange_version"</span>: <span class="s2">"1.116.0"</span>,
+            <span class="s2">"mms_api"</span>: <span class="s2">"https://9.30.210.34:8443/ec-css"</span>,
+            <span class="s2">"architecture"</span>: <span class="s2">"amd64"</span>,
+            <span class="s2">"horizon_version"</span>: <span class="s2">"2.23.29"</span>
+         <span class="o">}</span>,
+         <span class="s2">"connectivity"</span>: <span class="o">{</span>
+            <span class="s2">"firmware.bluehorizon.network"</span>: <span class="nb">true</span>,
+            <span class="s2">"images.bluehorizon.network"</span>: <span class="nb">true</span>
+         <span class="o">}</span>
+      <span class="o">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Continue on to <a href="#agent_reg">Registering the agent</a>.</li>
+</ol>
+
+<h2 id="agent_reg">Registering the agent</h2>
+
+<ol>
+  <li>Set your specific information as <strong>environment variables</strong>:</li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">eval export</span> <span class="si">$(</span><span class="nb">cat </span>agent-install.cfg<span class="si">)</span>
+  <span class="nb">export</span> HZN_EXCHANGE_USER_AUTH<span class="o">=</span>iamapikey:&lt;api-key&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>View the list of sample edge service deployment patterns:</li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  hzn exchange pattern list IBM/
+</code></pre></div></div>
+
+<ol>
+  <li>The helloworld edge service is the most basic example, which makes it a good place to begin. <strong>Register</strong> your edge device with Horizon to run the <strong>helloworld deployment pattern</strong>:</li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  hzn register <span class="nt">-p</span> IBM/pattern-ibm.helloworld
+</code></pre></div></div>
+
+<p><strong>Note</strong>: The node ID shown in the output in the line that starts with <strong>Using node ID</strong>.</p>
+
+<ol>
+  <li>The edge device will make an agreement with one of the Horizon agreement bots (this process typically takes about 15 seconds). <strong>Repeatedly query the agreements</strong> of this device until the <code class="language-plaintext highlighter-rouge">agreement_finalized_time</code> and <code class="language-plaintext highlighter-rouge">agreement_execution_start_time</code> fields are complete:</li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  hzn agreement list
+</code></pre></div></div>
+
+<ol>
+  <li><strong>After the agreement is made</strong>, list the docker container edge service that started as a result:</li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo </span>docker ps
+</code></pre></div></div>
+
+<ol>
+  <li>View the helloworld edge service <strong>output</strong>:</li>
+</ol>
+
+<div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo </span>hzn service log <span class="nt">-f</span> ibm.helloworld
+</code></pre></div></div>
+
+<h2 id="what_next">What to do next</h2>
+
+<p>Navigate to <a href="/docs/using_edge_services/cpu_load_example.html">CPU usage to IBM Event Streams</a> to continue with other edge service examples.</p>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

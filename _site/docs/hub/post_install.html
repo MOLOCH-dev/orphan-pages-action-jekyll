@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/hub/post_install.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/hub/post_install.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="post-installation-configuration">Post installation configuration</h1>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li><a href="../cli/cloudctl_oc_cli.md">IBM Cloud Pak CLI (<strong>cloudctl</strong>) and OpenShift client CLI (<strong>oc</strong>)</a></li>
+  <li><a href="https://stedolan.github.io/jq/download/"><strong>jq</strong> <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a></li>
+  <li><a href="https://git-scm.com/downloads"><strong>git</strong> <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a></li>
+  <li><a href="https://docs.docker.com/get-docker/"><strong>docker</strong> <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> version 1.13 or greater</li>
+  <li><strong>make</strong></li>
+</ul>
+
+<h2 id="installation-verification">Installation verification</h2>
+
+<ol>
+  <li>Complete the steps in <a href="/docs/hub/online_installation.html">Install Open Horizon</a></li>
+  <li>
+    <p>Ensure that all pods in the Open Horizon namespace are either <strong>Running</strong> or <strong>Completed</strong>:</p>
+
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>oc get pods
+</code></pre></div>    </div>
+
+    <p>This is an example of what should be seen with local databases installed. Some initialization restarts are expected, multiple restarts usually indicate an issue.:</p>
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oc get pods
+NAME                                           READY   STATUS      RESTARTS   AGE
+create-agbotdb-cluster-j4fnb                   0/1     Completed   0          88m
+create-exchangedb-cluster-hzlxm                0/1     Completed   0          88m
+ibm-common-service-operator-68b46458dc-nv2mn   1/1     Running     0          103m
+ibm-eamhub-operator-7bf99c5fc8-7xdts           1/1     Running     0          103m
+ibm-edge-agbot-5546dfd7f4-4prgr                1/1     Running     0          81m
+ibm-edge-agbot-5546dfd7f4-sck6h                1/1     Running     0          81m
+ibm-edge-agbotdb-keeper-0                      1/1     Running     0          88m
+ibm-edge-agbotdb-keeper-1                      1/1     Running     0          87m
+ibm-edge-agbotdb-keeper-2                      1/1     Running     0          86m
+ibm-edge-agbotdb-proxy-7447f6658f-7wvdh        1/1     Running     0          88m
+ibm-edge-agbotdb-proxy-7447f6658f-8r56d        1/1     Running     0          88m
+ibm-edge-agbotdb-proxy-7447f6658f-g4hls        1/1     Running     0          88m
+ibm-edge-agbotdb-sentinel-5766f666f4-5qm9x     1/1     Running     0          88m
+ibm-edge-agbotdb-sentinel-5766f666f4-5whgr     1/1     Running     0          88m
+ibm-edge-agbotdb-sentinel-5766f666f4-9xjpr     1/1     Running     0          88m
+ibm-edge-css-5c59c9d6b6-kqfnn                  1/1     Running     0          81m
+ibm-edge-css-5c59c9d6b6-sp84w                  1/1     Running     0          81m
+ibm-edge-css-5c59c9d6b6-wf84s                  1/1     Running     0          81m
+ibm-edge-cssdb-server-0                        1/1     Running     0          88m
+ibm-edge-exchange-b6647db8d-k97r8              1/1     Running     0          81m
+ibm-edge-exchange-b6647db8d-kkcvs              1/1     Running     0          81m
+ibm-edge-exchange-b6647db8d-q5ttc              1/1     Running     0          81m
+ibm-edge-exchangedb-keeper-0                   1/1     Running     1          88m
+ibm-edge-exchangedb-keeper-1                   1/1     Running     0          85m
+ibm-edge-exchangedb-keeper-2                   1/1     Running     0          84m
+ibm-edge-exchangedb-proxy-6bbd5b485-cx2v8      1/1     Running     0          88m
+ibm-edge-exchangedb-proxy-6bbd5b485-hs27d      1/1     Running     0          88m
+ibm-edge-exchangedb-proxy-6bbd5b485-htldr      1/1     Running     0          88m
+ibm-edge-exchangedb-sentinel-6d685bf96-hz59z   1/1     Running     1          88m
+ibm-edge-exchangedb-sentinel-6d685bf96-m4bdh   1/1     Running     0          88m
+ibm-edge-exchangedb-sentinel-6d685bf96-mxv2b   1/1     Running     1          88m
+ibm-edge-sdo-0                                 1/1     Running     0          81m
+ibm-edge-ui-545d694f6c-4rnrf                   1/1     Running     0          81m
+ibm-edge-ui-545d694f6c-97ptz                   1/1     Running     0          81m
+ibm-edge-ui-545d694f6c-f7bf6                   1/1     Running     0          81m
+</code></pre></div>    </div>
+
+    <p>Notes:</p>
+    <ul>
+      <li>For more information about any pods in the <strong>Pending</strong> state due to resource or scheduling issues, see the <a href="/docs/hub/cluster_sizing.html">cluster sizing</a> page. This includes information about how to reduce scheduling costs of components.</li>
+      <li>For more information about any other errors, see <a href="/docs/admin/troubleshooting.html">troubleshooting</a>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Ensure that all pods in the <strong>ibm-common-services</strong> namespace are either <strong>Running</strong> or <strong>Completed</strong>:</p>
+
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>oc get pods -n ibm-common-services
+</code></pre></div>    </div>
+  </li>
+  <li><a href="part_numbers.md">Download the agent package from IBM Passport Advantage</a> to your installation environment and unpack the installation media:
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code> tar -zxvf ibm-eam-4.2.0-agent-x86_64.tar.gz &amp;&amp; \
+ cd ibm-eam-4.2.0-agent-x86_64/tools
+</code></pre></div>    </div>
+  </li>
+  <li>Validate the installation state:
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ./service_healthcheck.sh
+</code></pre></div>    </div>
+
+    <p>See the following example output:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ./service_healthcheck.sh
+ ==Running service verification tests for IBM Edge Application Manager==
+ SUCCESS: IBM Edge Application Manager Exchange API is operational
+ SUCCESS: IBM Edge Application Manager Cloud Sync Service is operational
+ SUCCESS: IBM Edge Application Manager Agbot database heartbeat is current
+ SUCCESS: IBM Edge Application Manager SDO API is operational
+ SUCCESS: IBM Edge Application Manager UI is properly requiring valid authentication
+ ==All expected services are up and running==
+</code></pre></div>    </div>
+
+    <ul>
+      <li>If there are <strong>service_healthcheck.sh</strong> command failures, if you experience issues running the commands below, or if there are issues during runtime, see <a href="/docs/admin/troubleshooting.html">troubleshooting</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="postconfig">Post installation configuration</h2>
+
+<p>The following process must run on a host that supports installation of the <strong>hzn</strong> CLI, which currently can be installed on a Debian/apt based Linux, amd64 Red Hat/rpm Linux, or macOS host. These steps use the same media downloaded from PPA in the Installation verification section.</p>
+
+<ol>
+  <li>Install the <strong>hzn</strong> CLI using the instructions for your supported platform:
+    <ul class="codeblock">
+      <li>Navigate to the <strong>agent</strong> directory and unpack the agent files:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cd ibm-eam-4.2.0-agent-x86_64/agent &amp;&amp; \
+ tar -zxvf edge-packages-4.2.0.tar.gz
+</code></pre></div>        </div>
+      </li>
+    </ul>
+
+    <ul>
+      <li>Debian Linux example:
+        <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ./edge-packages-4.2.0/linux/deb/amd64/horizon-cli*.deb
+</code></pre></div>        </div>
+      </li>
+      <li>Red Hat Linux example:
+        <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo dnf install -yq ./edge-packages-4.2.0/linux/rpm/x86_64/horizon-cli-*.x86_64.rpm
+</code></pre></div>        </div>
+      </li>
+      <li>macOS example:
+        <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain edge-packages-4.2.0/macos/pkg/x86_64/horizon-cli.crt &amp;&amp; \
+sudo installer -pkg edge-packages-4.2.0/macos/pkg/x86_64/horizon-cli-*.pkg -target /
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Run the post installation script. This script performs all the necessary initialization to create your first organization. (Organizations are how Open Horizon separates resources and users to enable multi-tenancy. Initially, this first organization is sufficient. You can configure more organizations later. For more information, see <a href="../admin/multi_tenancy.md">Multi-tenancy <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>).</p>
+
+    <p><strong>Note:</strong> <strong>ibm</strong> and <strong>root</strong> are internal use orgs and can not be chosen as your initial org.</p>
+
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./post_install.sh &lt;choose-your-org-name&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>Run the following to print the Open Horizon Open Horizon management console link for your installation:
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo https://$(oc get cm management-ingress-ibmcloud-cluster-info -o jsonpath='{.data.cluster_ca_domain}')/edge
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="ldap-and-api-keys">LDAP and API keys</h2>
+
+<p>If not previously configured, create an LDAP connection by using the OpenShift Container Platform management console. After you establish an LDAP connection, create a team, grant that team access to the namespace the Open Horizon operator was deployed to, and add users to that team. This grants individual users the permission to create API keys.</p>
+
+<p><strong>Note:</strong> API-keys are used for authentication with the Open Horizon CLI and permissions that are associated with API keys are identical to the user they are generated with. For more information about LDAP, see <a href="https://www.ibm.com/support/knowledgecenter/SSHKN6/iam/3.x.x/configure_ldap.html">Configuring LDAP connection <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<h2 id="whats-next">What’s Next</h2>
+
+<p>After completing the steps in <a href="#postconfig">Post installation configuration</a>, follow the process on the <a href="/docs/hub/gather_files.html">Gather edge node files</a> page to prepare installation media for your edge nodes.</p>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

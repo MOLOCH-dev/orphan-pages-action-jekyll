@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/installing/watson_speech.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/installing/watson_speech.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="watson-speech">Watson speech to text</h1>
+
+<p>This service listens for the word Watson. When it is detected, the service captures an audio clip and sends it to an instance of Speech to Text.  Stop words are removed (optionally), and the transcribed text is sent to Apache Kafka.</p>
+
+<h2 id="before-you-begin">Before you begin</h2>
+
+<p>Ensure that your system meets these requirements:</p>
+
+<ul>
+  <li>You must register and unregister by performing the steps in <a href="/docs/installing/adding_devices.html">Preparing an edge device</a>.</li>
+  <li>A USB sound card and microphone is installed on your Raspberry Pi.</li>
+</ul>
+
+<p>This service requires both an instance of Apache Kafka and IBM Speech to Text to run correctly. For instructions about how to deploy an instance of event streams, see <a href="/docs/using_edge_services/cpu_load_example.html">Host CPU load percentage example (cpu2evtstreams)</a>.</p>
+
+<p>Ensure the necessary Apache Kafka environment variables are set:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "$EVTSTREAMS_API_KEY, $EVTSTREAMS_BROKER_URL"
+</code></pre></div></div>
+
+<p>The event streams topic this sample uses is <code class="language-plaintext highlighter-rouge">myeventstreams</code> by default, but you can use any topic by setting the following environment variable:</p>
+
+<div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export EVTSTREAMS_TOPIC=&lt;your-topic-name&gt;
+</code></pre></div></div>
+
+<h2 id="deploy_watson">Deploying an instance of IBM Speech to Text</h2>
+
+<p>If an instance is deployed currently, obtain the access information and set the environment variables, or follow these steps:</p>
+
+<ol>
+  <li>Navigate to the IBM Cloud.</li>
+  <li>Click <strong>Create resource</strong>.</li>
+  <li>Enter <code class="language-plaintext highlighter-rouge">Speech to Text</code> in the search box.</li>
+  <li>Select the <code class="language-plaintext highlighter-rouge">Speech to Text</code> tile.</li>
+  <li>Select a region, select a pricing plan, enter a service name, and click <strong>Create</strong> to provision the instance.</li>
+  <li>
+    <p>After provisioning is complete, click the instance and note the credentials API Key and URL and export them as the following environment variable:</p>
+
+    <div class="language-plaintext codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code> export STT_IAM_APIKEY=&lt;speech-to-text-api-key&gt;
+ export STT_URL=&lt;speech-to-text-url&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>Go to the Getting Started section for instructions of how to test the Speech to Text service.</li>
+</ol>
+
+<h2 id="watson_reg">Registering your edge device</h2>
+
+<p>To run the watsons2text service example on your edge node, you must register your edge node with the <code class="language-plaintext highlighter-rouge">IBM/pattern-ibm.watsons2text-arm</code> deployment pattern. Perform the steps in the <a href="https://github.com/open-horizon/examples/tree/master/edge/evtstreams/watson_speech2text#-using-the-ibm-watson-speech-to-text-to-ibm-event-streams-service-with-deployment-pattern">Using Watson Speech to Text to IBM Event Streams Service with Deployment Pattern <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> section of the readme file.</p>
+
+<h2 id="additional-information">Additional information</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">processtect</code> example source code is also available in the Horizon GitHub repository as an example for Open Horizondevelopment. This source includes the code for all of the four services that run on the edge nodes for this example.</p>
+
+<p>These services include:</p>
+
+<ul>
+  <li>The <a href="https://github.com/open-horizon/examples/tree/master/edge/services/hotword_detection">hotworddetect <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> service listens and detects the hot word Watson, and then records an audio clip and published it to the mqtt broker.</li>
+  <li>The <a href="https://github.com/open-horizon/examples/tree/master/edge/evtstreams/watson_speech2text">watsons2text <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> service receives an audio clip and sends it to the IBM Speech to Text service and publishes the deciphered text to the mqtt broker.</li>
+  <li>The <a href="https://github.com/open-horizon/examples/tree/master/edge/services/stopword_removal">stopwordremoval <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> service runs as a WSGI server takes a JSON object, such as {“text”: “how are you today”} and removes common stop words and returns {“result”: “how you today”}.</li>
+  <li>The <a href="https://github.com/open-horizon/examples/tree/master/edge/services/mqtt2kafka">mqtt2kafka <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> service publishes data to Apache Kafka when it receives something on the mqtt topic where it is subscribed.</li>
+  <li>The <a href="https://github.com/open-horizon/examples/tree/master/edge/services/mqtt_broker">mqtt_broker <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> is responsible for all inter-container communication.</li>
+</ul>
+
+<h2 id="what-to-do-next">What to do next</h2>
+
+<ul>
+  <li>
+    <p>For instructions about building and publishing your own version of the Offline Voice Assistant Edge Service, see <a href="https://github.com/open-horizon/examples/blob/master/edge/evtstreams/watson_speech2text/CreateService.md#-building-and-publishing-your-own-version-of-the-watson-speech-to-text-to-ibm-event-streams-service">Offline Voice Assistant Edge Service <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>. Follow the steps in the <code class="language-plaintext highlighter-rouge">watson_speech2text</code> directory of the Open Horizon examples repository.</p>
+  </li>
+  <li>
+    <p>See the <a href="https://github.com/open-horizon/examples">Open Horizon examples repository <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+  </li>
+</ul>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/installing/preparing_edge_cluster.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/installing/preparing_edge_cluster.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="preparing_edge_cluster">Preparing an edge cluster</h1>
+
+<p>Perform the following tasks to install an edge cluster and get it ready for the Open Horizon agent:</p>
+
+<p>Install one of these edge clusters and prepare it for the Open Horizon agent:</p>
+<ul>
+  <li><a href="#install_ocp_edge_cluster">Install an OCP edge cluster</a></li>
+  <li><a href="#install_k3s_edge_cluster">Install and configure a k3s edge cluster</a></li>
+  <li><a href="#install_microk8s_edge_cluster">Install and configure a microk8s edge cluster</a> (for development and test, not recommended for production)</li>
+</ul>
+
+<h2 id="install_ocp_edge_cluster">Install an OCP edge cluster</h2>
+
+<ol>
+  <li>
+    <p>Install OCP by following the installation instructions in the <a href="https://docs.openshift.com/container-platform/4.5/welcome/index.html">OpenShift Container Platform Documentation <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>. (Open Horizon only supports OCP on x86_64 platforms.)</p>
+  </li>
+  <li>
+    <p>Install the Kubernetes CLI (<strong>kubectl</strong>), Openshift client CLI (<strong>oc</strong>) and Docker on the admin host where you administer your OCP edge cluster. This is the same host where you run the agent installation script. For more information, see <a href="../cli/cloudctl_oc_cli.md">Installing cloudctl, kubectl, and oc</a>.</p>
+  </li>
+</ol>
+
+<h2 id="install_k3s_edge_cluster">Install and configure a k3s edge cluster</h2>
+
+<p>This content provides a summary of how to install k3s (rancher), a lightweight and small Kubernetes cluster, on Ubuntu 18.04. For more information, see the <a href="https://rancher.com/docs/k3s/latest/en/">k3s documentation <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<ol>
+  <li>
+    <p>Either login as <strong>root</strong> or elevate to <strong>root</strong> with <code class="language-plaintext highlighter-rouge">sudo -i</code></p>
+  </li>
+  <li>
+    <p>The full hostname of your machine must contain at least two dots. Check the full hostname:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">hostname</span>
+</code></pre></div>    </div>
+
+    <p>If the full hostname of your machine contains fewer than two dots, change the hostname:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hostnamectl set-hostname &lt;your-new-hostname-with-2-dots&gt;
+</code></pre></div>    </div>
+
+    <p>For more information, see <a href="https://github.com/rancher/k3s/issues/53">github issue <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+  </li>
+  <li>
+    <p>Install k3s:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-sfL</span> https://get.k3s.io | sh -
+</code></pre></div>    </div>
+  </li>
+  <li>Create the image registry service:
+    <ol>
+      <li>Create a file called <strong>k3s-persistent-claim.yml</strong> with this content:
+        <div class="language-yaml codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">PersistentVolumeClaim</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">docker-registry-pvc</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">storageClassName</span><span class="pi">:</span> <span class="s2">"</span><span class="s">local-path"</span>
+  <span class="na">accessModes</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">ReadWriteOnce</span>
+  <span class="na">resources</span><span class="pi">:</span>
+    <span class="na">requests</span><span class="pi">:</span>
+      <span class="na">storage</span><span class="pi">:</span> <span class="s">10Gi</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Create the persistent volume claim:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply <span class="nt">-f</span> k3s-persistent-claim.yml
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Verify that the persistent volume claim was created and it is in “Pending” status</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl get pvc
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Create a file called <strong>k3s-registry-deployment.yml</strong> with this content:</p>
+
+        <div class="language-yaml codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">docker-registry</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">docker-registry</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">docker-registry</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">docker-registry</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">registry-pvc-storage</span>
+        <span class="na">persistentVolumeClaim</span><span class="pi">:</span>
+          <span class="na">claimName</span><span class="pi">:</span> <span class="s">docker-registry-pvc</span>
+      <span class="na">containers</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">docker-registry</span>
+        <span class="na">image</span><span class="pi">:</span> <span class="s">registry</span>
+        <span class="na">ports</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">5000</span>
+        <span class="na">volumeMounts</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">registry-pvc-storage</span>
+          <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/var/lib/registry</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">docker-registry-service</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">docker-registry</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">NodePort</span>
+  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">5000</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Create the registry deployment and service:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply <span class="nt">-f</span> k3s-registry-deployment.yml
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Verify that the service was created:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl get deployment
+kubectl get service
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Define the registry endpoint:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">REGISTRY_ENDPOINT</span><span class="o">=</span><span class="si">$(</span>kubectl get service docker-registry-service | <span class="nb">grep </span>docker-registry-service | <span class="nb">awk</span> <span class="s1">'{print $3;}'</span><span class="si">)</span>:5000
+<span class="nb">cat</span> <span class="o">&lt;&lt;</span> <span class="no">EOF</span><span class="sh"> &gt;&gt; /etc/rancher/k3s/registries.yaml
+mirrors:
+  "</span><span class="nv">$REGISTRY_ENDPOINT</span><span class="sh">":
+    endpoint:
+      - "http://</span><span class="nv">$REGISTRY_ENDPOINT</span><span class="sh">"
+</span><span class="no">EOF
+</span></code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Restart k3s to pick up the change to <strong>/etc/rancher/k3s/registries.yaml</strong>:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart k3s
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Define this registry to docker as an insecure registry:</p>
+
+    <ol>
+      <li>
+        <p>Create or add to <strong>/etc/docker/daemon.json</strong> (replacing <code class="language-plaintext highlighter-rouge">&lt;registry-endpoint&gt;</code> with the value of the <code class="language-plaintext highlighter-rouge">$REGISTRY_ENDPOINT</code> environment variable you obtained in a previous step).</p>
+
+        <div class="language-json codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"insecure-registries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"&lt;registry-endpoint&gt;"</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>        </div>
+      </li>
+      <li>
+        <p>(optional) If needed, verify that docker is on your machine:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-fsSL</span> get.docker.com | sh
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Restart docker to pick up the change:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart docker
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="install_microk8s_edge_cluster">Install and configure a microk8s edge cluster</h2>
+
+<p>This content provides a summary of how to install microk8s, a lightweight and small kubernetes cluster, on Ubuntu 18.04. (For more detailed instructions, see the <a href="https://microk8s.io/docs">microk8s documentation <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.)</p>
+
+<p><strong>Note</strong>: This type of edge cluster is meant for development and test because a single worker node Kubernetes cluster does not provide scalability or high availability.</p>
+
+<ol>
+  <li>
+    <p>Install microk8s:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>snap <span class="nb">install </span>microk8s <span class="nt">--classic</span> <span class="nt">--channel</span><span class="o">=</span>stable
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you are not running as <strong>root</strong>, add your user to the <strong>microk8s</strong> group:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>usermod <span class="nt">-a</span> <span class="nt">-G</span> microk8s <span class="nv">$USER</span>
+<span class="nb">sudo chown</span> <span class="nt">-f</span> <span class="nt">-R</span> <span class="nv">$USER</span> ~/.kube
+su - <span class="nv">$USER</span>   <span class="c"># create new session for group update to take place</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Enable dns and storage modules in microk8s:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>microk8s.enable dns
+microk8s.enable storage
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Check the status:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>microk8s.status <span class="nt">--wait-ready</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>The microK8s kubectl command is called <strong>microk8s.kubectl</strong> to prevent conflicts with an already installed <strong>kubectl</strong> command. Assuming that  <strong>kubectl</strong> is not installed, add this alias for <strong>microk8s.kubectl</strong>:</p>
+
+    <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'alias kubectl=microk8s.kubectl'</span> <span class="o">&gt;&gt;</span> ~/.bash_aliases
+<span class="nb">source</span> ~/.bash_aliases
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Enable the container registry and configure docker to tolerate the insecure registry:</p>
+
+    <ol>
+      <li>
+        <p>Enable the container registry:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>microk8s.enable registry
+<span class="nb">export </span><span class="nv">REGISTRY_ENDPOINT</span><span class="o">=</span>localhost:32000
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Install docker (if not already installed):</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
+add-apt-repository <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> stable"</span>
+apt-get <span class="nb">install </span>docker-ce docker-ce-cli containerd.io
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Define this registry as insecure to docker. Create or add to <strong>/etc/docker/daemon.json</strong> (replacing <code class="language-plaintext highlighter-rouge">&lt;registry-endpoint&gt;</code> with the value of the <code class="language-plaintext highlighter-rouge">$REGISTRY_ENDPOINT</code> environment variable you obtained in a previous step).</p>
+
+        <div class="language-json codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"insecure-registries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"&lt;registry-endpoint&gt;"</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>        </div>
+      </li>
+      <li>
+        <p>(optional) Verify that docker is on your machine:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-fsSL</span> get.docker.com | sh
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Restart docker to pick up the change:</p>
+
+        <div class="language-bash codeblock highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl restart docker
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="whats-next">What’s next</h2>
+
+<ul>
+  <li><a href="/docs/installing/edge_cluster_agent.html">Installing the agent</a></li>
+</ul>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

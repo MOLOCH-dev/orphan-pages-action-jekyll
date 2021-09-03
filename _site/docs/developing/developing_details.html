@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="description" content="An Open Source Project for secure and robust containerized application management for constrained devices.">
+	<meta property="og:title" content="Open Horizon" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000///docs/developing/developing_details.html" />
+<meta property="og:image" content="http://localhost:4000//img/hero-dark.jpg">
+
+	
+
+	<meta name="citation_title" content="Project Pages - An Integrated Scientific Blogging Template">
+
+
+
+	
+
+	<link rel='shortcut icon' type='image/png' href='/img/favicon.png' />
+
+    <title>Open Horizon</title>
+
+    <link rel="canonical" href="http://localhost:4000/docs/developing/developing_details.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/clean-blog.css">
+
+	<!-- Adjust Colors -->
+    <link rel="stylesheet" href="http://localhost:4000/css/colorscheme.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- Math Jax -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" } }
+	});
+	</script>
+
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js" type="text/javascript"></script>-->
+
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="http://localhost:4000/js/clean-blog.min.js "></script>
+
+    <!-- Clipboard.js -->
+    <script src="http://localhost:4000/js/clipboard.min.js " ></script>
+
+    <!-- CDN Hosted Clipboard.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
+
+
+	
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Open Horizon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/quick-start">Quick Start</a>
+                </li>
+
+                <li>
+                    <a href="/docs/">Docs</a>
+                </li>
+
+                <!-- <li>
+                    <a href="/blog">Blog</a>
+                </li> -->
+
+                <li>
+                    <a href="/docs/getting_started/faq.html">FAQ</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/hero-dark.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" style="padding: 75px 0">
+					
+                    
+                    
+
+                    <h1 style="font-size:4.0em">Open Horizon</h1>
+                    <hr class="small">
+
+                    <span class="subheading">An Open Source Project for secure and robust containerized application management for constrained devices.</span>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+	<div class="row">
+      <div class="col-lg-12 col-md-12">
+			
+<h1 id="developing">Development details</h1>
+
+<p class="shortdesc">The following content provides more details on the software development practices and concepts for Open Horizon (Open Horizon) development.</p>
+
+<h2 id="developing_intro">Introduction</h2>
+
+<p>Open Horizon (Open Horizon) is built on the <a href="https://wiki.edgexfoundry.org/display/FA/Open+Horizon+-+EdgeX+Project+Group">Open Horizon - EdgeX Project Group <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a> open source software.</p>
+
+<p>With Open Horizon, you can develop any service containers that you want for your edge machines. You can then cryptographically sign and publish your code. Finally, you can specify policies within an Open Horizon deployment pattern to govern software installation, monitoring, and updating. After you complete these tasks, you can view the Horizon agents and Horizon agbots forming agreements to collaborate on managing the software lifecycle. These components then manage the software lifecycle details on your Open Horizon edge nodes fully autonomously based on the registered deployment pattern for each edge node. Open Horizon can also use policies to determine where and when to autonomously deploy services and machine learning models. Policies are an alternative to deployment patterns.</p>
+
+<p>The software development process within Open Horizon is focused on maintaining system security and integrity, while greatly simplifying the effort that is required for active software management on your edge nodes. Open Horizon can also use policies to determine where and when to autonomously deploy services and machine learning models. Policies are an alternative to deployment patterns. You can build Open Horizon publishing procedures into your continuous integration and deployment pipeline. When the distributed autonomous agents discover published changes in the software or a policy, such as within the Open Horizon deployment pattern or deployment policy, the autonomous agents independently act to update the software or enforce your policies across your entire fleet of edge machines, wherever they are located.</p>
+
+<h2 id="services_deploy_patterns">Services and deployment patterns</h2>
+
+<p>Open Horizon services are the building blocks of deployment patterns. Each service can contain one or more Docker containers. Each Docker container can in turn contain one or more long-running processes. These processes can be written in almost any programming language, and use any libraries or utilities. However, the processes must be developed for, and run in, the context of a Docker container. This flexibility means that there are almost no constraints on the code that Open Horizon can manage for you. When a container runs, the container is constrained in a secure sandbox. This sandbox restricts access to hardware devices, some operating system services, the host file system, and the host edge machine networks. For information on sandbox constraints, see <a href="#sandbox">Sandbox</a>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> example code consists of a Docker container that uses two other local edge services. These local edge services connect over local private Docker virtual networks by using HTTP REST APIs. These services are named <code class="language-plaintext highlighter-rouge">cpu</code> and <code class="language-plaintext highlighter-rouge">gps</code>. The agent deploys each service on a separate private network along with each service that declared a dependency on the service. One network is created for <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> and <code class="language-plaintext highlighter-rouge">cpu</code>, and another network is created for <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> and <code class="language-plaintext highlighter-rouge">gps</code>. If there is a fourth service in this deployment pattern that is also sharing the <code class="language-plaintext highlighter-rouge">cpu</code> service, then another private network is created for just the <code class="language-plaintext highlighter-rouge">cpu</code> and the fourth service. In Open Horizon, this network strategy restricts access for services to only the other services that are listed in <code class="language-plaintext highlighter-rouge">requiredServices</code> when the other services were published. The following diagram shows the <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> deployment pattern when the pattern runs on an edge node:</p>
+
+<p><img src="../images/edge/07_What_is_an_edge_node.svg" style="margin: 3%" alt="Services in a pattern" /></p>
+
+<p>Note: Set up IBM Event Streams only needed for some examples.</p>
+
+<p>The two virtual networks enable the <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> service container to access the REST APIs that are provided by the <code class="language-plaintext highlighter-rouge">cpu</code> and <code class="language-plaintext highlighter-rouge">gps</code> service containers. These two containers manage access to operating system services and the hardware devices. Although REST APIs are used, there are many other possible forms of communication that you can use to enable your services to share data and control.</p>
+
+<p>Often the most effective coding pattern for edge nodes involves deploying multiple small, independently configurable, and deployable services. For example, Internet of Things patterns often have low-level services that need access to the edge node hardware, such as sensors or actuators. These services provide shared access to this hardware for other services to use.</p>
+
+<p>This pattern is useful when the hardware requires exclusive access to provide a useful function. The low-level service can properly manage this access. The role of the <code class="language-plaintext highlighter-rouge">cpu</code> and <code class="language-plaintext highlighter-rouge">gps</code> service containers is similar in principle to that of the device driver software in the host’s operating system, but at a higher level. Segmenting the code into independent small services, some specializing in low-level hardware access, enables a clear separation of concerns. Each component is free to evolve and be updated in the field independently. Third-party applications can also be securely deployed together along with your proprietary traditional embedded software stack by selectively allowing them access to particular hardware or other services.</p>
+
+<p>For example, an industrial controller deployment pattern might be composed of a low-level service for monitoring power usage sensors and other low-level services. These other low-level services can be used to enable control of the actuators for powering the devices that are monitored. The deployment pattern might also have another top-level service container that consumes the services of the sensor and actuator. This top-level service can use the services to alert operators or to automatically power down devices when anomalous power consumption readings are detected. This deployment pattern might also include a history service that records and archives sensor and actuator data, and possibly complete analysis on the data. Other useful components of such a deployment pattern might be a GPS location service.</p>
+
+<p>Each individual service container can be independently updated with this design. Each individual service might also be reconfigured and composed into other useful deployment patterns without any code changes. If needed, a third-party analytics service can be added to the pattern. This third-party service can be given access to only a particular set of read-only APIs, which restricts the service from interacting with the actuators on the platform.</p>
+
+<p>Alternatively, all of the tasks in this industrial controller example can be run within a single service container. This alternative is not usually the best approach since a collection of smaller independent and interconnected services usually makes software updates faster and more flexible. Collections of smaller services can also be more robust in the field. For more information about how to design your deployment patterns, see <a href="/docs/developing/best_practices.html">Edge-native development practices</a>.</p>
+
+<h2 id="sandbox">Sandbox</h2>
+
+<p>The sandbox in which deployment patterns run restricts access to the APIs that are provided by your service containers. Only the other services that explicitly state dependencies on your services are permitted access. Other processes on the host normally do not access to these services. Similarly, other remote hosts do not normally have access to any of these services unless the service explicitly publishes a port to the host’s external network interface.</p>
+
+<h2 id="using_services">Services that use other services</h2>
+
+<p>Edge services often use various API interfaces that are provided by other edge services to acquire data from them, or to deliver control commands to them. These API interfaces are commonly HTTP REST APIs, like the ones provided by the low-level <code class="language-plaintext highlighter-rouge">cpu</code> and <code class="language-plaintext highlighter-rouge">gps</code> services in the <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> example. However, those interfaces can really be anything that you want, such as shared memory, TCP, or UDP, and can be with or without encryption. Since these communications typically take place within a single edge node, with messages never leaving this host, often encryption is unnecessary.</p>
+
+<p>As an alternative to REST APIs, you can use a publishing and subscribing interface, such as the interface that is provided by MQTT. When a service provides data intermittently only, a publishing and subscribing interface is usually simpler than repeatedly polling a REST API as the REST APIs can timeout. For example, consider a service that monitors a hardware button, and provides an API for other services to detect whether a button press occurred. If a REST API is used, the caller cannot call the REST API and wait for a reply that would come when the button was pressed. If the button remained unpressed for too long, the REST API would timeout. Instead, the API provider would need to respond promptly to avoid an error. The caller must repeatedly and frequently call the API to be sure not to miss a brief button press. A better solution is for the caller to subscribe to an appropriate topic on a publishing and subscribing service and block. Then, the caller can wait for something to be published, which might occur far in the future. The API provider can take care of monitoring the button hardware and then publish only the state changes to that topic, such as <code class="language-plaintext highlighter-rouge">button pressed</code>, or <code class="language-plaintext highlighter-rouge">button released</code>.</p>
+
+<p>MQTT is one of the more popular publishing and subscribing tools that you can use. You can deploy an MQTT broker as an edge service, and have your publisher and subscriber services require it. MQTT is also frequently used as a cloud service. The IBM Watson IoT Platform, for example, uses MQTT to communicate with IoT devices. For more information, see <a href="https://www.ibm.com/cloud/watson-iot-platform">IBM Watson IoT Platform <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>. Some of the Open Horizon project examples use MQTT. For more information, see <a href="https://github.com/open-horizon/examples">Open Horizon examples</a>.</p>
+
+<p>Another popular publishing and subscribing tool is Apache Kafka, which is also frequently used as a cloud service. Apache Kafka, which is used by the <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> example to send data to the IBM Cloud, is also based on Kafka. For more information, see <a href="https://www.ibm.com/cloud/event-streams">Apache Kafka <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<p>Any edge service container can provide or consume other local edge services on the same host, and edge services provided on nearby hosts on the local LAN. Containers might communicate with centralized systems in a remote corporate or cloud provider data center. As a service author, you determine with whom and how your services communicate.</p>
+
+<p>You might find it useful to review the <code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> example again to see how the example code uses the other two local services. For instance, how the example code specifies dependencies on the two local services, declares and uses configuration variables, and communicates with Kafka. For more information, see <a href="/docs/developing/cpu_msg_example.html"><code class="language-plaintext highlighter-rouge">cpu2evtstreams</code> example</a>.</p>
+
+<h2 id="service_definition">Service definition</h2>
+
+<p>Note: See <a href="/docs/getting_started/document_conventions.html">Conventions used in this document</a> for more information about command syntax.</p>
+
+<p>In every Open Horizon project, you have a <code class="language-plaintext highlighter-rouge">horizon/service.definition.json</code> file. This file defines your edge service for two reasons. One of these reasons is to enable you to simulate the running of your service by the <code class="language-plaintext highlighter-rouge">hzn dev</code> tool, similar to how it runs in the Horizon agent. This simulation is useful for working out any special deployment instructions that you might need, such as port bindings, and hardware device access. The simulation is also useful for verifying communications between service containers on the docker virtual private networks that the agent creates for you. The other reason for this file is to enable you to publish your service to Horizon exchange. In the provided examples, the <code class="language-plaintext highlighter-rouge">horizon/service.definition.json</code> file is either provided for you within the example GitHub repository or is generated by the <code class="language-plaintext highlighter-rouge">hzn dev service new</code> command.</p>
+
+<p>Open the <code class="language-plaintext highlighter-rouge">horizon/service.definition.json</code> file that contains the Horizon metadata for one of the example service implementations, for example, the <a href="https://github.com/open-horizon/examples/blob/master/edge/evtstreams/cpu2evtstreams/horizon/service.definition.json">cpu2evtstreams</a>.</p>
+
+<p>Every service that is published in Horizon needs to have a <code class="language-plaintext highlighter-rouge">url</code> that uniquely identifies it within your organization. This field is not a URL. Instead, the <code class="language-plaintext highlighter-rouge">url</code> field forms a globally unique identifier, when combined with your organization name, and a specific implementation <code class="language-plaintext highlighter-rouge">version</code> and <code class="language-plaintext highlighter-rouge">arch</code> fields. You can edit the <code class="language-plaintext highlighter-rouge">horizon/service.definition.json</code> file to provide appropriate values for <code class="language-plaintext highlighter-rouge">url</code> and <code class="language-plaintext highlighter-rouge">version</code>. For the <code class="language-plaintext highlighter-rouge">version</code> value, use a semantic versioning style value. Use the new values when you push, sign, and publish your service containers. Alternatively, you can edit the <code class="language-plaintext highlighter-rouge">horizon/hzn.json</code> file and the tools substitute any variable values that are found there, in place of any variable references used in the <code class="language-plaintext highlighter-rouge">horizon/service.definition.json</code> file.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">requiredServices</code> section of the <code class="language-plaintext highlighter-rouge">horizon/service.definition.json</code> file itemizes any service dependencies, such as any other edge services that this container uses. The <code class="language-plaintext highlighter-rouge">hzn dev dependency fetch</code> tool makes lets you add dependencies to this list, so you do not need to manually edit the list. After dependencies are added, when the agent runs the container, those other <code class="language-plaintext highlighter-rouge">requiredServices</code> are also automatically run (for example, when you use <code class="language-plaintext highlighter-rouge">hzn dev service start</code> or when you register a node with a deployment pattern that contains this service). For more information about required services, see <a href="/docs/developing/cpu_msg_example.html">cpu2evtstreams</a>.</p>
+
+<p>In the <code class="language-plaintext highlighter-rouge">userInput</code> section, you declare the configuration variables that your Service can consume to configure itself for a particular deployment. You provide variable names, data types, and default values here and you might also provide a human-readable description for each. When you use <code class="language-plaintext highlighter-rouge">hzn dev service start</code> or when you register an edge node with a deployment pattern containing this service, you need to provide a <code class="language-plaintext highlighter-rouge">userinput.json</code> file to define values for the variables that do not have default values. For more information about the <code class="language-plaintext highlighter-rouge">userInput</code> configuration variables and <code class="language-plaintext highlighter-rouge">userinput.json</code> files, see <a href="/docs/developing/cpu_msg_example.html">cpu2evtstreams</a>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">horizon/service.definition.json</code> file also contains a <code class="language-plaintext highlighter-rouge">deployment</code> section, toward the end of the file. The fields in this section name each Docker container image that implements your logical Service. The name of each record that is used here in the <code class="language-plaintext highlighter-rouge">services</code> array is the name that other containers use to identify the container on the shared virtual private network. If this container provides a REST API for other containers to consume, you can access this REST API within the consuming container by using <code class="language-plaintext highlighter-rouge">curl http://&lt;name&gt;/&lt;your-rest-api-uri&gt;</code>. The <code class="language-plaintext highlighter-rouge">image</code> field for each name provides a reference to the corresponding Docker container image, such as within DockerHub or some private container registry. Other fields in the <code class="language-plaintext highlighter-rouge">deployment</code> section can be used to change the way that the agent indicates to Docker to run the container. For more information, see <a href="https://github.com/open-horizon/anax/blob/master/docs/deployment_string.md">Horizon deployment strings <img src="../images/icons/launch-glyph.svg" alt="Opens in a new tab" title="Opens in a new tab" /></a>.</p>
+
+<h2 id="developing_what_next">What to do next</h2>
+
+<p>For more information about developing edge node code, review the following documentation:</p>
+
+<ul>
+  <li>
+    <p><a href="/docs/developing/best_practices.html">Edge-native development practices</a></p>
+
+    <p>Review the important principles and best practices for developing edge services for Open Horizon software development.</p>
+  </li>
+  <li>
+    <p><a href="/docs/developing/container_registry.html">Using DockerHub</a></p>
+
+    <p>With Open Horizon, you can optionally put service containers into the IBM private secure container registry instead of the public Docker Hub. For instance, if you have a software image that includes assets that are not appropriate to include in a public registry, you can use a private Docker container registry like the DockerHub.</p>
+  </li>
+  <li>
+    <p><a href="../api/edge_rest_apis.md">APIs</a></p>
+
+    <p>Open Horizon provides RESTful APIs to collaborate and enables your organization’s developers and users to control the components.</p>
+  </li>
+  <li>
+    <p><a href="/docs/using_edge_services/service_rollbacks.html">Updating an edge service with rollback</a></p>
+
+    <p>Review additional details on how to roll out a new version of an existing edge service and the software development best practices for updating rollback settings in pattern or deployment policies.</p>
+  </li>
+</ul>
+
+      </div>
+	</div>
+</div>
+
+<hr>
+
+
+	
+    <!-- Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+                 <ul class="list-inline text-center">
+                    <!-- <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/open-horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+					
+                    <li>
+                        <a href="https://github.com/open-horizon/open-horizon.github.io/issues">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		         <li>
+                        <a href="https://wiki.lfedge.org/display/OH/Open+Horizon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://github.com/projectpages/project-pages/fork">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li> -->
+                    
+                </ul> 
+
+                <div align="center">
+                  <div class="copytext"><p><a href="https://app.slack.com/client/THT8G7R0V/C011XLC1V2Q" target="_blank" style="text-decoration:none">Join Chat</a>   |   <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="text-decoration:none">License</a>   |   ©2020 IBM. All rights reserved</p></div>
+
+                </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>
