@@ -15,10 +15,11 @@ runs:
   steps:
     - run: |
         echo "This is a bash shell"
+        declare -a crawled_links
         echo "Link ${{ inputs.start-url }}."
         export LOG=log.txt
         export URL=${{ inputs.start-url }}
         wget --no-directories --mirror --spider "$URL" 2>&1 | tee "$LOG";
-        crawled_links=(`echo grep -P -o -e '(?<=^--....-..-.. ..:..:..--  )(.*)' "$LOG"`);
+        crawled_links=(`grep -P -o -e '(?<=^--....-..-.. ..:..:..--  )(.*)' "$LOG"`);
         echo "::set-output name=orphan-pages::$crawled_links"
       shell: bash
