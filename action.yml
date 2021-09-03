@@ -9,11 +9,11 @@ inputs:
 outputs:
   orphan-pages: # id of output
     description: 'Orphan pages found'
-run: |
-  wget --no-directories --mirror --spider "https://open-horizon.github.io/" 2>&1 | tee log.txt;
-  crawled_links=(`grep -P -o -e '(?<=^--....-..-.. ..:..:..--  )(.*)' log.txt`);
-  cd _site;
-  repo_links=$(ls -R | grep ".html\|.js\|.css\|.png\|.md\|.scss");
-  orphan_pages_open_horizon=$(echo ${crawled_links[@]} ${repo_links[@]} | tr ' ' '\n' | sort | uniq -u)
-  echo "The orphan pages are : "
-  {{ outputs.orphan-pages }} = echo $orphan_pages_open_horizon
+defaults:
+  run:
+    shell: bash
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.start-url }}
