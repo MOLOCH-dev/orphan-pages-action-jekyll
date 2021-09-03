@@ -9,26 +9,6 @@ inputs:
 outputs:
   orphan-pages: # id of output
     description: 'Orphan pages found'
-defaults:
-  run:
-    shell: bash
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.start-url }}
-
-
-name: Crawler
-description: 'Crawl website to find orphan pages'
-inputs:
-  start-url:  # id of input
-    description: 'Url to start crawling from'
-    required: true
-    default: "https://open-horizon.github.io/"
-outputs:
-  orphan-pages: # id of output
-    description: 'Orphan pages found'
     # value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
   using: "composite"
