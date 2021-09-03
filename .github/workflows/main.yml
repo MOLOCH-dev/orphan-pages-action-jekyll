@@ -9,7 +9,7 @@ jobs:
       - name: wget
         uses: wei/wget@v1
         with:
-          args: --spider --timeout=2 'https://open-horizon.github.io' 2>&1 | tee log.txt
+          args: -g --spider --timeout=2 'https://open-horizon.github.io' 2>&1 | tee log.txt
   # crawler_job:
   #   runs-on: ubuntu-latest
   #   name: A job to crawl for orphan links
