@@ -5,7 +5,7 @@ inputs:
   start-url:  # id of input
     description: 'Url to start crawling from'
     required: true
-    default: https://open-horizon.github.io/
+    default: https://open-horizon.github.io
 outputs:
   orphan-pages: # id of output
     description: 'Orphan pages found'
