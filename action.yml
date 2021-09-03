@@ -19,5 +19,8 @@ runs:
         export LOG=log.txt
         export URL=${{ inputs.start-url }}
         echo $URL
-        wget -r --no-directories -S --spider --content-on-error "${{ inputs.start-url }}";
+        echo "before wget"
+        wget -r -S --spider --content-on-error "${{ inputs.start-url }}";
+        echo "after wget"
+        echo $?;
       shell: bash
