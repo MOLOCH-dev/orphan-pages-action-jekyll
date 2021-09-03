@@ -1,28 +1,19 @@
 on: [push]
 
 jobs:
-  wget:
-      runs-on: ubuntu-latest
-      steps:
+  crawler_job:
+    runs-on: ubuntu-latest
+    name: A job to crawl for orphan links
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: wget
-        uses: wei/wget@v1
+      - name: crawler action step
+        uses: ./ # Uses an action in the root directory
+        id: crawler
         with:
-          args: -g --spider --timeout=2 'https://open-horizon.github.io' 2>&1 | tee log.txt
-  # crawler_job:
-  #   runs-on: ubuntu-latest
-  #   name: A job to crawl for orphan links
-  #   steps:
-  #     # To use this repository's private action,
-  #     # you must check out the repository
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
-  #     - name: crawler action step
-  #       uses: ./ # Uses an action in the root directory
-  #       id: crawler
-  #       with:
-  #         start-url: https://open-horizon.github.io
-  #     # Use the output from the `hello` step
-  #     - name: Get the output orphan pages
-  #       run: echo "The orphan urls were ${{ steps.crawler.outputs.orphan-pages }}"
+          start-url: https://open-horizon.github.io
+      # Use the output from the `hello` step
+      - name: Get the output orphan pages
+        run: echo "The orphan urls were ${{ steps.crawler.outputs.orphan-pages }}"
